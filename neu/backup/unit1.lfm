@@ -1,0 +1,481 @@
+object Form1: TForm1
+  Left = 291
+  Height = 697
+  Top = 198
+  Width = 948
+  Caption = 'Emi Calculator'
+  ClientHeight = 697
+  ClientWidth = 948
+  LCLVersion = '2.0.10.0'
+  object wav: TButton
+    Left = 624
+    Height = 25
+    Top = 44
+    Width = 75
+    Caption = 'Berechnen'
+    OnClick = wavClick
+    TabOrder = 0
+  end
+  object headergroesse: TEdit
+    Left = 424
+    Height = 23
+    Top = 48
+    Width = 80
+    TabOrder = 1
+    Text = '44'
+  end
+  object laenge: TEdit
+    Left = 16
+    Height = 23
+    Top = 48
+    Width = 80
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 765
+    Height = 15
+    Top = 8
+    Width = 182
+    Caption = 'Alle Dateigrößen in Byte eingeben!'
+    Color = clRed
+    ParentColor = False
+    Transparent = False
+  end
+  object kanaele: TRadioGroup
+    Left = 536
+    Height = 64
+    Top = 32
+    Width = 72
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 44
+    ClientWidth = 68
+    Items.Strings = (
+      'Mono'
+      'Stereo'
+    )
+    OnClick = kanaeleClick
+    TabOrder = 3
+  end
+  object sampletiefe: TEdit
+    Left = 216
+    Height = 23
+    Top = 48
+    Width = 80
+    TabOrder = 4
+    Text = '3'
+  end
+  object samplerate: TEdit
+    Left = 314
+    Height = 23
+    Top = 48
+    Width = 80
+    TabOrder = 5
+    Text = '44100'
+  end
+  object groesse: TEdit
+    Left = 113
+    Height = 23
+    Top = 48
+    Width = 80
+    TabOrder = 6
+  end
+  object groessemib: TEdit
+    Left = 113
+    Height = 23
+    Top = 80
+    Width = 80
+    ReadOnly = True
+    TabOrder = 7
+  end
+  object Label2: TLabel
+    Left = 416
+    Height = 30
+    Top = 73
+    Width = 113
+    Caption = '44 falls '#13#10'Formatblock=16 Byte'
+    ParentColor = False
+  end
+  object fmax: TEdit
+    Left = 110
+    Height = 23
+    Top = 168
+    Width = 80
+    TabOrder = 8
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 15
+    Top = 22
+    Width = 72
+    Caption = 'Audiorechner'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 15
+    Top = 144
+    Width = 79
+    Caption = 'Abtasttheorem'
+    ParentColor = False
+  end
+  object fabtast: TEdit
+    Left = 16
+    Height = 23
+    Top = 168
+    Width = 80
+    TabOrder = 9
+  end
+  object Button1: TButton
+    Left = 208
+    Height = 25
+    Top = 166
+    Width = 75
+    Caption = 'Berechnen'
+    OnClick = Button1Click
+    TabOrder = 10
+  end
+  object fps: TEdit
+    Left = 313
+    Height = 23
+    Top = 264
+    Width = 80
+    TabOrder = 11
+    Text = '24'
+  end
+  object Label5: TLabel
+    Left = 16
+    Height = 15
+    Top = 240
+    Width = 70
+    Caption = 'Videorechner'
+    ParentColor = False
+  end
+  object laengev: TEdit
+    Left = 16
+    Height = 23
+    Top = 264
+    Width = 80
+    TabOrder = 12
+  end
+  object groessev: TEdit
+    Left = 114
+    Height = 23
+    Top = 266
+    Width = 80
+    TabOrder = 13
+  end
+  object aufloesung1: TEdit
+    Left = 409
+    Height = 23
+    Top = 264
+    Width = 80
+    TabOrder = 14
+    Text = '1920'
+  end
+  object aufloesung2: TEdit
+    Left = 513
+    Height = 23
+    Top = 264
+    Width = 80
+    TabOrder = 15
+    Text = '1080'
+  end
+  object x: TLabel
+    Left = 409
+    Height = 15
+    Top = 264
+    Width = 6
+    Caption = 'x'
+    ParentColor = False
+  end
+  object farbtiefe: TEdit
+    Left = 217
+    Height = 23
+    Top = 266
+    Width = 80
+    TabOrder = 16
+    Text = '2'
+  end
+  object groessemibv: TEdit
+    Left = 114
+    Height = 23
+    Top = 304
+    Width = 80
+    ReadOnly = True
+    TabOrder = 17
+  end
+  object Label6: TLabel
+    Left = 313
+    Height = 30
+    Top = 300
+    Width = 72
+    Caption = 'Kino: 24'#13#10'Fernsehen: 25'
+    ParentColor = False
+  end
+  object laengeminutenv: TEdit
+    Left = 16
+    Height = 23
+    Top = 304
+    Width = 80
+    TabOrder = 18
+  end
+  object laengeminuten: TEdit
+    Left = 16
+    Height = 23
+    Top = 80
+    Width = 80
+    TabOrder = 19
+  end
+  object Label7: TLabel
+    Left = 16
+    Height = 15
+    Top = 384
+    Width = 84
+    Caption = 'Kontrastrechner'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 16
+    Height = 15
+    Top = 576
+    Width = 100
+    Caption = 'Kodierungsrechner'
+    ParentColor = False
+  end
+  object r8: TEdit
+    Left = 32
+    Height = 23
+    Top = 440
+    Width = 80
+    TabOrder = 20
+  end
+  object b8: TEdit
+    Left = 230
+    Height = 23
+    Top = 440
+    Width = 80
+    TabOrder = 21
+  end
+  object g8: TEdit
+    Left = 128
+    Height = 23
+    Top = 440
+    Width = 80
+    TabOrder = 22
+  end
+  object Label9: TLabel
+    Left = 8
+    Height = 15
+    Top = 408
+    Width = 577
+    Caption = '(Farbwerte für L1 als 8 bit oder SRGB eingeben, dann L1 drücken, dann Werte für L2 eingeben und L2 drücken)'
+    ParentColor = False
+  end
+  object L1: TEdit
+    Left = 448
+    Height = 23
+    Top = 440
+    Width = 80
+    TabOrder = 23
+  end
+  object L2: TEdit
+    Left = 544
+    Height = 23
+    Top = 440
+    Width = 80
+    TabOrder = 24
+  end
+  object t_wert: TEdit
+    Left = 752
+    Height = 23
+    Top = 470
+    Width = 88
+    TabOrder = 25
+  end
+  object rating: TEdit
+    Left = 752
+    Height = 23
+    Top = 440
+    Width = 152
+    TabOrder = 26
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 342
+    Height = 55
+    Top = 438
+    Width = 73
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 35
+    ClientWidth = 69
+    Items.Strings = (
+      'Normal'
+      'Fett'
+    )
+    OnClick = RadioGroup1Click
+    TabOrder = 27
+  end
+  object schriftgroesse: TEdit
+    Left = 344
+    Height = 23
+    Top = 496
+    Width = 80
+    TabOrder = 28
+  end
+  object Video2: TButton
+    Left = 624
+    Height = 25
+    Top = 264
+    Width = 75
+    Caption = 'Berechnen'
+    OnClick = Video2Click
+    TabOrder = 29
+  end
+  object L1b: TButton
+    Left = 448
+    Height = 25
+    Top = 471
+    Width = 80
+    Caption = 'L1'
+    OnClick = L1bClick
+    TabOrder = 30
+  end
+  object L2b: TButton
+    Left = 544
+    Height = 25
+    Top = 471
+    Width = 80
+    Caption = 'L2'
+    OnClick = L2bClick
+    TabOrder = 31
+  end
+  object Label10: TLabel
+    Left = 344
+    Height = 15
+    Top = 429
+    Width = 44
+    Caption = 'optional'
+    ParentColor = False
+  end
+  object Zeichen: TEdit
+    Left = 48
+    Height = 23
+    Top = 600
+    Width = 80
+    TabOrder = 32
+  end
+  object WSK: TEdit
+    Left = 48
+    Height = 23
+    Top = 624
+    Width = 80
+    TabOrder = 33
+  end
+  object Hinzufuegen: TButton
+    Left = 48
+    Height = 25
+    Top = 648
+    Width = 80
+    Caption = 'Hinzufügen'
+    OnClick = HinzufuegenClick
+    ParentShowHint = False
+    TabOrder = 34
+  end
+  object eingegebenezeichen: TEdit
+    Left = 192
+    Height = 23
+    Top = 612
+    Width = 696
+    TabOrder = 35
+  end
+  object Label11: TLabel
+    Left = 200
+    Height = 15
+    Top = 592
+    Width = 151
+    Caption = 'Bereits eingegebene Zeichen'
+    ParentColor = False
+  end
+  object Entropie: TEdit
+    Left = 352
+    Height = 23
+    Top = 648
+    Width = 80
+    TabOrder = 36
+  end
+  object mittlerelaenge: TEdit
+    Left = 496
+    Height = 23
+    Top = 650
+    Width = 80
+    TabOrder = 37
+  end
+  object Redundanz: TEdit
+    Left = 680
+    Height = 23
+    Top = 650
+    Width = 80
+    TabOrder = 38
+  end
+  object neuliste: TButton
+    Left = 193
+    Height = 25
+    Top = 646
+    Width = 104
+    Caption = 'Liste Zurücksetzen'
+    OnClick = neulisteClick
+    TabOrder = 39
+  end
+  object rsrgb: TEdit
+    Left = 32
+    Height = 23
+    Top = 472
+    Width = 80
+    TabOrder = 40
+  end
+  object gsrgb: TEdit
+    Left = 128
+    Height = 23
+    Top = 470
+    Width = 80
+    TabOrder = 41
+  end
+  object bsrgb: TEdit
+    Left = 230
+    Height = 23
+    Top = 470
+    Width = 80
+    TabOrder = 42
+  end
+  object loeschen: TButton
+    Left = 32
+    Height = 25
+    Top = 504
+    Width = 80
+    Caption = 'Löschen'
+    OnClick = loeschenClick
+    TabOrder = 43
+  end
+  object neuu: TButton
+    Left = 856
+    Height = 25
+    Top = 32
+    Width = 80
+    Caption = 'Zurücksetzen'
+    OnClick = neuuClick
+    TabOrder = 44
+  end
+end
