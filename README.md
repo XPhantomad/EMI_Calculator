@@ -1,8 +1,6 @@
 # EMI_Calculator
 stand:
 
--grundsätzlich müssten alle funktionen drinn sein und irgendwas machen
-
 -Fano.C für fano, scheint zu funktionieren
 
 -Merge wäre natürlich klasse aber ich wollte nicht deine ganze Ordnung zerstören
@@ -12,14 +10,16 @@ stand:
 
 plan:
 
--UI Design absolut unverständlich
+-UI Design katarstrophal
 
--hex edit felder erstelle ich noch, da delphi inttohex funktion hat 
+-hex felder programmieren
 
 -evtl noch error handling aber müsste auch ohne gehen
 
 -kaum getestet
 
 -Code ist heilloses Chaos
+
+-umstellung dateieinheiten auf bit da byte für hex ja nicht funktioniert!!!??
 
 
