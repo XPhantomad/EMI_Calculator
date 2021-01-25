@@ -4,7 +4,8 @@
 -Merge wäre natürlich klasse aber ich wollte nicht deine ganze Ordnung zerstören
 -Tonhöhe Funktion doch entfernt
 
--UI Design absolut unverständlich 
+-UI Design absolut unverständlich
+-hex edit felder erstelle ich noch, da delphi inttohex funktion hat 
 -evtl noch error handling aber müsste auch ohne gehen
 -kaum getestet
 -Code ist heilloses Chaos
