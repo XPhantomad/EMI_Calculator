@@ -16,6 +16,8 @@ type
     Button1: TButton;
     aufloesung1: TEdit;
     aufloesung2: TEdit;
+    loeschen2: TButton;
+    loeschen1: TButton;
     hex1: TCheckBox;
     hex3: TCheckBox;
     hex4: TCheckBox;
@@ -110,21 +112,23 @@ begin
      if p=0 then P:=1;
 end;
 
-
+// Berechnung Luminanz Farbe1
 procedure TForm1.L1bClick(Sender: TObject);
  var r,g,b:real;
 begin
      r:=0;
      g:=0;
      b:=0;
-     if r8.text='' then begin
+     //red
+     if r8.text='' then begin              // eingabe sRGB
         r:=strtofloat(rsrgb.text);
-        r8.text:=floattostr(r*255);
+        r8.text:=floattostr(r*255);        // ausgabe sRGB
      end
-     else begin
+     else begin                            // eingabe 8bit
         r:=strtofloat(r8.text)/255;
-        rsrgb.text:=floattostr(r);
+        rsrgb.text:=floattostr(r);         // Ausgabe sRGB
      end;
+     //green
      if g8.text='' then begin
         g:=strtofloat(gsrgb.text);
         g8.text:=floattostr(g*255);
@@ -133,6 +137,7 @@ begin
         g:=strtofloat(g8.text)/255;
         gsrgb.text:=floattostr(g);
      end;
+     // blue
      if b8.text='' then begin
         b:=strtofloat(bsrgb.text);
         b8.text:=floattostr(b*255);
@@ -141,12 +146,14 @@ begin
         b:=strtofloat(b8.text)/255;
         bsrgb.text:=floattostr(b);
      end;
+
   if r<=0.03928 then r:=r/12.92 else r:=exp(2.4*(ln((r+0.055)/1.055)));
   if g<=0.03928 then g:=g/12.92 else g:=exp(2.4*(ln((g+0.055)/1.055)));
   if b<=0.03928 then b:=b/12.92 else b:=exp(2.4*(ln((b+0.055)/1.055)));
-  L1.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);
+  L1.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);  // berechnung und ausgabe Luminanz Farbe 1 (hellere Farbe)
 end;
 
+//Berechnung Luminanz Farbe 2
 procedure TForm1.L2bClick(Sender: TObject);
 var r,g,b: real;
 begin
@@ -183,8 +190,9 @@ begin
   if r<=0.03928 then r:=r/12.92 else r:=exp(2.4*(ln((r+0.055)/1.055)));
   if g<=0.03928 then g:=g/12.92 else g:=exp(2.4*(ln((g+0.055)/1.055)));
   if b<=0.03928 then b:=b/12.92 else b:=exp(2.4*(ln((b+0.055)/1.055)));
-  L2.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);
-  t_wert.text:=floattostr((strtofloat(L1.text)+0.05)/(strtofloat(L2.text)+0.05));
+  L2.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);      // berechnung und ausgabe Luminanz Farbe 2 (dunklere Farbe)
+
+  t_wert.text:=floattostr((strtofloat(L1.text)+0.05)/(strtofloat(L2.text)+0.05));   // Berechnungn T-Wert
   if (not((schriftgroesse.text=''))or (p2=-1)) then begin
      if  (strtofloat(t_wert.text)>= 7) then rating.text:='ausreichend für Level AAA'
      else if ((((strtofloat(t_wert.text)>= 3) and (p2=1))and (strtofloat(schriftgroesse.text)>17)) or ((((strtofloat(t_wert.text)>= 3) and (p2=0))and (strtofloat(schriftgroesse.text)>13)))) then
