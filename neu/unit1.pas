@@ -16,6 +16,12 @@ type
     Button1: TButton;
     aufloesung1: TEdit;
     aufloesung2: TEdit;
+    loeschen2: TButton;
+    loeschen1: TButton;
+    hex1: TCheckBox;
+    hex3: TCheckBox;
+    hex4: TCheckBox;
+    hex2: TCheckBox;
     neuu: TButton;
     loeschen: TButton;
     rsrgb: TEdit;

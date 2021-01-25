@@ -16,6 +16,10 @@ type
     Button1: TButton;
     aufloesung1: TEdit;
     aufloesung2: TEdit;
+    hex1: TCheckBox;
+    hex3: TCheckBox;
+    hex4: TCheckBox;
+    hex2: TCheckBox;
     neuu: TButton;
     loeschen: TButton;
     rsrgb: TEdit;
@@ -228,7 +232,7 @@ begin
     entropie.text:=floattostr(-1*e);
     for i:=0 to n-1 do l:=l+WSKn[i]*length(buchstaben[i]);
     mittlerelaenge.text:=floattostr(l);
-    redundanz.text:=floattostr(l+e));
+    redundanz.text:=floattostr(l+e);
 end;
 
 procedure TForm1.neulisteClick(Sender: TObject);
