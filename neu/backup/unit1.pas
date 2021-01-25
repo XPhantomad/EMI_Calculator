@@ -16,6 +16,7 @@ type
     Button1: TButton;
     aufloesung1: TEdit;
     aufloesung2: TEdit;
+    Label12: TLabel;
     loeschen2: TButton;
     loeschen1: TButton;
     hex1: TCheckBox;
@@ -245,6 +246,7 @@ begin
     redundanz.text:=floattostr(l+e);
 end;
 
+// Liste Zurücksetzen
 procedure TForm1.neulisteClick(Sender: TObject);
 begin
   eingegebenezeichen.clear;
@@ -300,7 +302,7 @@ begin
   p2:=radiogroup1.itemindex;
 end;
 
-
+//Videorechner
 procedure TForm1.Video2Click(Sender: TObject);
 var l,fpsv,ft,g,a1,a2: real;
 begin
@@ -310,27 +312,31 @@ begin
    g:=0;
    a1:=0;
    a2:=0;
+ // Größe berechnen
   if groessev.text='' then begin
-        if laengeminutenv.text='' then l:=strtofloat(laengev.text) else l:=strtofloat(laengeminutenv.text)*60;
-        fpsv:=strtofloat(fps.text);
-        ft:=strtofloat(farbtiefe.text);
-        a1:=strtofloat(aufloesung1.text);
-        a2:=strtofloat(aufloesung2.text);
-        groessev.text:=floattostr(l*fpsv*ft*a1*a2);
-        groessemibv.text:=floattostr((l*fpsv*ft*a1*a2)/(1024*1024));
+        if laengeminutenv.text='' then l:=strtofloat(laengev.text) else l:=strtofloat(laengeminutenv.text)*60;     // eingabe Länge in Minuten oder Sekunden
+        fpsv:=strtofloat(fps.text);                                                                                // eingabe FPS
+        ft:=strtofloat(farbtiefe.text);                                                                            // eingabe Farbtiefe
+        a1:=strtofloat(aufloesung1.text);                                                                          // eingabe Auflösung x
+        a2:=strtofloat(aufloesung2.text);                                                                          // eingabe Auflösung y
+        groessev.text:=floattostr(l*fpsv*ft*a1*a2);                                                                // ausgabe größe in byte
+        groessemibv.text:=floattostr((l*fpsv*ft*a1*a2)/(1024*1024));                                               // ausgabe größe in mebibyte
      end;
+// Länge berechnen
   if ((laengev.text='') and (laengeminutenv.text='')) then begin
-        g:=strtofloat(groessev.text);
+        g:=strtofloat(groessev.text);                                                                             // eingabe größe in Byte
         fpsv:=strtofloat(fps.text);
         ft:=strtofloat(farbtiefe.text);
         a1:=strtofloat(aufloesung1.text);
         a2:=strtofloat(aufloesung2.text);
-        laengev.text:=floattostr(g/(fpsv*ft*a1*a2));
-        laengeminutenv.text:=floattostr((g/(fpsv*ft*a1*a2))/60);
+        laengev.text:=floattostr(g/(fpsv*ft*a1*a2));                                                              // ausgabe Länge in sekunden
+        laengeminutenv.text:=floattostr((g/(fpsv*ft*a1*a2))/60);                                                  // ausgabe Länge in Minuten
      end;
 
 end;
 
+// Audioberechnung
+// Bemerkung: die Headergröße vieleicht noch aufspliten, sodass man nur noch die größe des Frormatblocks eingeben muss
 
 procedure TForm1.wavClick(Sender: TObject);
 var l,sr,st,hg,g:real;
@@ -340,22 +346,23 @@ begin
      st:=0;
      hg:=0;
      g:=0;
+     // Berechnung Größe
      if groesse.text='' then begin
         st:=strtofloat(sampletiefe.text);
         sr:=strtofloat(samplerate.text);
         hg:=strtofloat(headergroesse.text);
-        if laengeminuten.text='' then l:=strtofloat(laenge.text) else l:=strtofloat(laengeminuten.text)*60;
+        if laengeminuten.text='' then l:=strtofloat(laenge.text) else l:=strtofloat(laengeminuten.text)*60;         // eingabe Länge in Minuten oder sekunden
         groesse.text:=floattostr(st*sr*l*p+hg);
-        groessemib.text:=floattostr((st*sr*l*p+hg)/(1024*1024));
+        groessemib.text:=floattostr((st*sr*l*p+hg)/(1024*1024));                                                     // ausgabe größe in mebibyte
      end;
-
+     // Berechnung Länge
      if ((laenge.text='') and (laengeminuten.text='')) then begin
         st:=strtofloat(sampletiefe.text);
         sr:=strtofloat(samplerate.text);
         hg:=strtofloat(headergroesse.text);
         g:=strtofloat(groesse.text);
         laenge.text:=floattostr((g-hg)/(st*sr*p));
-        laengeminuten.text:=floattostr(((g-hg)/(st*sr*p))/60);
+        laengeminuten.text:=floattostr(((g-hg)/(st*sr*p))/60);                                                     // ausgabe Länge in Minuten
      end;
 
 end;
