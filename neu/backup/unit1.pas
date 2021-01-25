@@ -193,7 +193,8 @@ begin
   L2.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);      // berechnung und ausgabe Luminanz Farbe 2 (dunklere Farbe)
 
   t_wert.text:=floattostr((strtofloat(L1.text)+0.05)/(strtofloat(L2.text)+0.05));   // Berechnungn T-Wert
-  if (not((schriftgroesse.text=''))or (p2=-1)) then begin
+
+  if (not((schriftgroesse.text=''))or (p2=-1)) then begin                           // p2 gibt Fett / Normal an p2=-1 nichts ausgewählt
      if  (strtofloat(t_wert.text)>= 7) then rating.text:='ausreichend für Level AAA'
      else if ((((strtofloat(t_wert.text)>= 3) and (p2=1))and (strtofloat(schriftgroesse.text)>17)) or ((((strtofloat(t_wert.text)>= 3) and (p2=0))and (strtofloat(schriftgroesse.text)>13)))) then
           rating.text:='ausreichend für Level AA'
@@ -204,6 +205,7 @@ begin
 
 end;
 
+// Kontrastrechner Felder Löschen
 procedure TForm1.loeschenClick(Sender: TObject);
 begin
   r8.clear;
@@ -214,11 +216,11 @@ begin
   bsrgb.clear;
 end;
 
-
+// Abtasttheorem
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  if fabtast.text='' then fabtast.text:=floattostr(2*strtofloat(fmax.text));
-  if fmax.text='' then fmax.text:=floattostr(0.5*strtofloat(fabtast.text));
+  if fabtast.text='' then fabtast.text:=floattostr(2*strtofloat(fmax.text));   // Abtastfrequenz berechnen
+  if fmax.text='' then fmax.text:=floattostr(0.5*strtofloat(fabtast.text));    // Maximalfrequenz berechnen
 end;
 
 procedure TForm1.HinzufuegenClick(Sender: TObject);
@@ -254,6 +256,7 @@ begin
   n:=0;
 end;
 
+// Zurücksetzen
 procedure TForm1.neuuClick(Sender: TObject);
 begin
        kanaele.itemindex:=-1;
@@ -291,6 +294,7 @@ begin
 
 end;
 
+// Kontrastrechner Normal/Fett
 procedure TForm1.RadioGroup1Click(Sender: TObject);
 begin
   p2:=radiogroup1.itemindex;
