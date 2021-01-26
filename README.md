@@ -22,4 +22,7 @@ plan:
 
 -umstellung dateieinheiten auf bit da byte für hex ja nicht funktioniert!!!??
 
+Errorhandling: 
+Zeile unter jedem Unterpunkt, delche bei Falschen Eingaben Hilfen ausgibt oder berichtigungsvorschläge
+Wichitg: keine Falschen eingaben annehmen 
 
