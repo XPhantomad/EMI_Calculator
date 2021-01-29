@@ -8,19 +8,13 @@ stand:
 -Tonhöhe Funktion doch entfernt
 
 
-plan:
+To Do:
 
--UI Design katarstrophal
+TESTEN TESTEN TESTEN!
 
--hex felder programmieren
+-Enter Funktion wäre praktisch (Enter-> man ist im zweiten Feld, nochmal Enter -> man ist wieder im ersten Feld und Wert wurde hinzugefügt) 
 
 -evtl noch error handling aber müsste auch ohne gehen
-
--kaum getestet
-
--Code ist heilloses Chaos
-
--umstellung dateieinheiten auf bit da byte für hex ja nicht funktioniert!!!??
 
 Errorhandling: 
 Zeile unter jedem Unterpunkt, delche bei Falschen Eingaben Hilfen ausgibt oder berichtigungsvorschläge
