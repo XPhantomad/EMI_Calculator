@@ -18,6 +18,8 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde
 
 -TESTEN!
 
+-master löschen falls das geht
+
 -Enter Funktion wäre ganz praktisch, ich finde aber beim besten Willen keine leichte Implementation
 (Enter-> man ist im zweiten Feld, nochmal Enter -> man ist wieder im ersten Feld und Wert wurde hinzugefügt) 
 
