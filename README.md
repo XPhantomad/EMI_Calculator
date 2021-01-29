@@ -10,7 +10,7 @@ stand:
 
 To Do:
 
-TESTEN TESTEN TESTEN!
+TESTEN!
 
 -Enter Funktion wäre praktisch (Enter-> man ist im zweiten Feld, nochmal Enter -> man ist wieder im ersten Feld und Wert wurde hinzugefügt) 
 
