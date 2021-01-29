@@ -273,7 +273,7 @@ begin
      laengeminuten.text:='';
      groesse.text:='';
      groessemib.text:='';
-
+     hex1.state:=cbunchecked;
 end;
 
 procedure TForm1.loeschen2Click(Sender: TObject);
@@ -293,6 +293,9 @@ begin
   rsrgb.clear;
   gsrgb.clear;
   bsrgb.clear;
+  hex2.state:=cbunchecked;
+  hex3.state:=cbunchecked;
+  hex4.state:=cbunchecked;
 end;
 
 procedure TForm1.loeschenlisteClick(Sender: TObject);
@@ -359,6 +362,10 @@ end;
 // Zurücksetzen
 procedure TForm1.neuuClick(Sender: TObject);
 begin
+     hex1.state:=cbunchecked;
+     hex2.state:=cbunchecked;
+     hex3.state:=cbunchecked;
+     hex4.state:=cbunchecked;
      kanaele.itemindex:=-1;
      laenge.text:='';
      laengeminuten.text:='';
@@ -439,6 +446,7 @@ end;
 procedure TForm1.wavClick(Sender: TObject);
 var l,sr,st,hg,g:real;
 begin
+     if kanaele.itemindex=-1 then Exit;
      l:=0;
      sr:=0;
      st:=0;

@@ -218,29 +218,32 @@ begin
   r:=0;
   g:=0;
   b:=0;
-  if r8.text='' then begin
-     r:=strtofloat(rsrgb.text);
-     r8.text:=floattostr(r*255);
+  //red
+  if r8.text='' then begin              // eingabe sRGB
+     r:=strtofloat(rsrgb.text);                                 // meckern, wenn ungültige Werte
+     if hex2.state=cbchecked then r8.text:=inttohex(strtoint(floattostr(round(r*255))),8) else r8.text:=floattostr(r*255);        // ausgabe sRGB
   end
-  else begin
-     r:=strtofloat(r8.text)/255;
-     rsrgb.text:=floattostr(r);
+  else begin                            // eingabe 8bit
+     if hex2.state=cbchecked then r:=hextoint(r8.text)/255 else r:=strtofloat(r8.text)/255 ;
+     rsrgb.text:=floattostr(r);         // Ausgabe sRGB
   end;
-  if g8.text='' then begin
-     g:=strtofloat(gsrgb.text);
-     g8.text:=floattostr(g*255);
+  //green
+  if g8.text='' then begin              // eingabe sRGB
+     g:=strtofloat(gsrgb.text);                                 // meckern, wenn ungültige Werte
+     if hex2.state=cbchecked then g8.text:=inttohex(strtoint(floattostr(round(g*255))),8) else g8.text:=floattostr(g*255);        // ausgabe sRGB
   end
-  else begin
-     g:=strtofloat(g8.text)/255;
-     gsrgb.text:=floattostr(g);
+  else begin                            // eingabe 8bit
+     if hex2.state=cbchecked then g:=hextoint(g8.text)/255 else g:=strtofloat(g8.text)/255 ;
+     gsrgb.text:=floattostr(g);         // Ausgabe sRGB
   end;
-  if b8.text='' then begin
-     b:=strtofloat(bsrgb.text);
-     b8.text:=floattostr(b*255);
+  // blue
+  if b8.text='' then begin              // eingabe sRGB
+     b:=strtofloat(bsrgb.text);                                 // meckern, wenn ungültige Werte
+     if hex2.state=cbchecked then b8.text:=inttohex(strtoint(floattostr(round(b*255))),8) else b8.text:=floattostr(b*255);        // ausgabe sRGB
   end
-  else begin
-     b:=strtofloat(b8.text)/255;
-     bsrgb.text:=floattostr(b);
+  else begin                            // eingabe 8bit
+     if hex2.state=cbchecked then b:=hextoint(b8.text)/255 else b:=strtofloat(b8.text)/255 ;
+     bsrgb.text:=floattostr(b);         // Ausgabe sRGB
   end;
 
   if g8.text='' then g:=strtofloat(gsrgb.text) else g:=strtofloat(g8.text)/255;
@@ -436,6 +439,7 @@ end;
 procedure TForm1.wavClick(Sender: TObject);
 var l,sr,st,hg,g:real;
 begin
+     if kanaele.itemindex=-1 then Exit;
      l:=0;
      sr:=0;
      st:=0;
