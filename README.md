@@ -3,8 +3,6 @@ stand:
 
 -Fano.C für fano, scheint zu funktionieren
 
--Merge wäre natürlich klasse aber ich wollte nicht deine ganze Ordnung zerstören
-
 -Tonhöhe Funktion doch entfernt
 
 -error handling: in den Feldern, die keine Hex Werte erlauben, dürfen keine Buchstaben mehr eingegeben werden
