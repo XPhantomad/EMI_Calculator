@@ -1,5 +1,5 @@
 # EMI_Calculator
-stand:
+////Stand////
 
 -error handling: in den Feldern, die keine Hex Werte erlauben, dürfen keine Buchstaben mehr eingegeben werden
 
@@ -12,7 +12,7 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde
 
 
 
-To Do:
+////To Do////
 
 -TESTEN!
 
