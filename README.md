@@ -9,9 +9,7 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde
 
 -Tonhöhe Funktion doch entfernt
 
--https://github.com/fsr villeicht können wir uns die Zusammenfassung doch sparen
-
-(...vielleicht wäre sie aber auch trotzdem sinnvoll?)
+-https://github.com/fsr villeicht können wir uns die Zusammenfassung doch sparen (...vielleicht wäre sie aber auch trotzdem sinnvoll?)
 
 
 
