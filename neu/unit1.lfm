@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 937
+  Left = 963
   Height = 753
-  Top = 122
+  Top = 127
   Width = 948
   Caption = 'Emi Calculator'
   ClientHeight = 753
@@ -29,6 +29,7 @@ object Form1: TForm1
     Height = 23
     Top = 64
     Width = 80
+    NumbersOnly = True
     TabOrder = 2
   end
   object kanaele: TRadioGroup
@@ -97,6 +98,7 @@ object Form1: TForm1
     Height = 23
     Top = 192
     Width = 96
+    NumbersOnly = True
     TabOrder = 8
   end
   object Label3: TLabel
@@ -124,6 +126,7 @@ object Form1: TForm1
     Height = 23
     Top = 192
     Width = 84
+    NumbersOnly = True
     TabOrder = 9
   end
   object Button1: TButton
@@ -158,6 +161,7 @@ object Form1: TForm1
     Height = 23
     Top = 288
     Width = 80
+    NumbersOnly = True
     TabOrder = 12
   end
   object groessev: TEdit
@@ -165,6 +169,7 @@ object Form1: TForm1
     Height = 23
     Top = 288
     Width = 80
+    NumbersOnly = True
     TabOrder = 13
   end
   object aufloesung1: TEdit
@@ -204,6 +209,7 @@ object Form1: TForm1
     Height = 23
     Top = 322
     Width = 80
+    NumbersOnly = True
     ReadOnly = True
     TabOrder = 17
   end
@@ -220,6 +226,7 @@ object Form1: TForm1
     Height = 23
     Top = 322
     Width = 80
+    NumbersOnly = True
     TabOrder = 18
   end
   object laengeminuten: TEdit
@@ -227,6 +234,7 @@ object Form1: TForm1
     Height = 23
     Top = 96
     Width = 80
+    NumbersOnly = True
     TabOrder = 19
   end
   object Label7: TLabel
@@ -283,6 +291,7 @@ object Form1: TForm1
     Height = 23
     Top = 478
     Width = 80
+    NumbersOnly = True
     TabOrder = 23
   end
   object L2: TEdit
@@ -290,6 +299,7 @@ object Form1: TForm1
     Height = 23
     Top = 478
     Width = 80
+    NumbersOnly = True
     TabOrder = 24
   end
   object t_wert: TEdit
@@ -297,6 +307,7 @@ object Form1: TForm1
     Height = 23
     Top = 520
     Width = 88
+    NumbersOnly = True
     TabOrder = 25
   end
   object rating: TEdit
@@ -333,6 +344,7 @@ object Form1: TForm1
     Height = 23
     Top = 502
     Width = 80
+    NumbersOnly = True
     TabOrder = 28
   end
   object Video2: TButton
@@ -384,6 +396,7 @@ object Form1: TForm1
     Height = 23
     Top = 664
     Width = 80
+    NumbersOnly = True
     OnKeyPress = WSKKeyPress
     TabOrder = 33
   end
@@ -417,6 +430,7 @@ object Form1: TForm1
     Height = 23
     Top = 704
     Width = 80
+    NumbersOnly = True
     TabOrder = 36
   end
   object mittlerelaenge: TEdit
@@ -424,6 +438,7 @@ object Form1: TForm1
     Height = 23
     Top = 704
     Width = 80
+    NumbersOnly = True
     TabOrder = 37
   end
   object Redundanz: TEdit
@@ -431,6 +446,7 @@ object Form1: TForm1
     Height = 23
     Top = 704
     Width = 80
+    NumbersOnly = True
     TabOrder = 38
   end
   object neuliste: TButton
@@ -447,6 +463,7 @@ object Form1: TForm1
     Height = 23
     Top = 508
     Width = 80
+    NumbersOnly = True
     TabOrder = 40
   end
   object gsrgb: TEdit
@@ -454,6 +471,7 @@ object Form1: TForm1
     Height = 23
     Top = 508
     Width = 80
+    NumbersOnly = True
     TabOrder = 41
   end
   object bsrgb: TEdit
@@ -461,6 +479,7 @@ object Form1: TForm1
     Height = 23
     Top = 508
     Width = 80
+    NumbersOnly = True
     TabOrder = 42
   end
   object loeschen: TButton
