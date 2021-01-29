@@ -1,14 +1,14 @@
 object Form1: TForm1
   Left = 937
-  Height = 745
+  Height = 753
   Top = 122
   Width = 948
   Caption = 'Emi Calculator'
-  ClientHeight = 745
+  ClientHeight = 753
   ClientWidth = 948
   LCLVersion = '2.0.10.0'
   object wav: TButton
-    Left = 728
+    Left = 768
     Height = 25
     Top = 60
     Width = 75
@@ -31,20 +31,10 @@ object Form1: TForm1
     Width = 80
     TabOrder = 2
   end
-  object Label1: TLabel
-    Left = 741
-    Height = 15
-    Top = 0
-    Width = 207
-    Caption = 'Alle DEC Dateigrößen in Byte eingeben!'
-    Color = clRed
-    ParentColor = False
-    Transparent = False
-  end
   object kanaele: TRadioGroup
-    Left = 640
+    Left = 680
     Height = 64
-    Top = 40
+    Top = 53
     Width = 72
     AutoFill = True
     ChildSizing.LeftRightSpacing = 6
@@ -69,7 +59,7 @@ object Form1: TForm1
     Top = 64
     Width = 80
     TabOrder = 4
-    Text = '3'
+    Text = '24'
   end
   object samplerate: TEdit
     Left = 409
@@ -207,7 +197,7 @@ object Form1: TForm1
     Top = 288
     Width = 80
     TabOrder = 16
-    Text = '2'
+    Text = '16'
   end
   object groessemibv: TEdit
     Left = 152
@@ -252,7 +242,7 @@ object Form1: TForm1
   object Label8: TLabel
     Left = 16
     Height = 15
-    Top = 608
+    Top = 616
     Width = 100
     Caption = 'Kodierungsrechner'
     Color = clAqua
@@ -305,7 +295,7 @@ object Form1: TForm1
   object t_wert: TEdit
     Left = 776
     Height = 23
-    Top = 508
+    Top = 520
     Width = 88
     TabOrder = 25
   end
@@ -319,7 +309,7 @@ object Form1: TForm1
   object RadioGroup1: TRadioGroup
     Left = 600
     Height = 55
-    Top = 474
+    Top = 528
     Width = 73
     AutoFill = True
     ChildSizing.LeftRightSpacing = 6
@@ -341,7 +331,7 @@ object Form1: TForm1
   object schriftgroesse: TEdit
     Left = 600
     Height = 23
-    Top = 536
+    Top = 502
     Width = 80
     TabOrder = 28
   end
@@ -376,28 +366,31 @@ object Form1: TForm1
     Left = 600
     Height = 15
     Top = 457
-    Width = 44
-    Caption = 'optional'
+    Width = 46
+    Caption = 'Optional'
+    Color = clForm
     ParentColor = False
+    Transparent = False
   end
   object Zeichen: TEdit
-    Left = 48
+    Left = 65
     Height = 23
-    Top = 632
+    Top = 640
     Width = 80
     TabOrder = 32
   end
   object WSK: TEdit
-    Left = 48
+    Left = 65
     Height = 23
-    Top = 656
+    Top = 664
     Width = 80
+    OnKeyPress = WSKKeyPress
     TabOrder = 33
   end
   object Hinzufuegen: TButton
-    Left = 48
+    Left = 65
     Height = 25
-    Top = 680
+    Top = 696
     Width = 80
     Caption = 'Hinzufügen'
     OnClick = HinzufuegenClick
@@ -407,44 +400,44 @@ object Form1: TForm1
   object eingegebenezeichen: TEdit
     Left = 192
     Height = 23
-    Top = 648
+    Top = 656
     Width = 696
     TabOrder = 35
   end
   object Label11: TLabel
     Left = 200
     Height = 15
-    Top = 624
+    Top = 632
     Width = 151
     Caption = 'Bereits eingegebene Zeichen'
     ParentColor = False
   end
   object Entropie: TEdit
-    Left = 352
+    Left = 417
     Height = 23
-    Top = 680
+    Top = 704
     Width = 80
     TabOrder = 36
   end
   object mittlerelaenge: TEdit
-    Left = 496
+    Left = 616
     Height = 23
-    Top = 682
+    Top = 704
     Width = 80
     TabOrder = 37
   end
   object Redundanz: TEdit
-    Left = 680
+    Left = 784
     Height = 23
-    Top = 682
+    Top = 704
     Width = 80
     TabOrder = 38
   end
   object neuliste: TButton
-    Left = 193
+    Left = 192
     Height = 25
-    Top = 678
-    Width = 104
+    Top = 720
+    Width = 134
     Caption = 'Liste Zurücksetzen'
     OnClick = neulisteClick
     TabOrder = 39
@@ -480,9 +473,9 @@ object Form1: TForm1
     TabOrder = 43
   end
   object neuu: TButton
-    Left = 864
+    Left = 856
     Height = 25
-    Top = 18
+    Top = 6
     Width = 80
     Caption = 'Zurücksetzen'
     OnClick = neuuClick
@@ -513,9 +506,9 @@ object Form1: TForm1
     TabOrder = 47
   end
   object hex1: TCheckBox
-    Left = 220
+    Left = 200
     Height = 19
-    Top = 40
+    Top = 41
     Width = 41
     Caption = 'Hex'
     TabOrder = 48
@@ -526,14 +519,16 @@ object Form1: TForm1
     Top = 316
     Width = 75
     Caption = 'Löschen'
+    OnClick = loeschen2Click
     TabOrder = 49
   end
   object loeschen1: TButton
-    Left = 728
+    Left = 768
     Height = 25
-    Top = 94
+    Top = 88
     Width = 75
     Caption = 'Löschen'
+    OnClick = loeschen1Click
     TabOrder = 50
   end
   object Label12: TLabel
@@ -580,8 +575,8 @@ object Form1: TForm1
     Left = 238
     Height = 15
     Top = 290
-    Width = 23
-    Caption = 'byte'
+    Width = 14
+    Caption = 'bit'
     ParentColor = False
   end
   object Label17: TLabel
@@ -593,9 +588,9 @@ object Form1: TForm1
     ParentColor = False
   end
   object Label18: TLabel
-    Left = 155
+    Left = 152
     Height = 15
-    Top = 45
+    Top = 44
     Width = 35
     Caption = 'Größe:'
     ParentColor = False
@@ -617,11 +612,11 @@ object Form1: TForm1
     ParentColor = False
   end
   object Label21: TLabel
-    Left = 376
+    Left = 368
     Height = 15
     Top = 70
-    Width = 23
-    Caption = 'byte'
+    Width = 14
+    Caption = 'bit'
     ParentColor = False
   end
   object Label22: TLabel
@@ -638,7 +633,9 @@ object Form1: TForm1
     Top = 70
     Width = 23
     Caption = 'byte'
+    Color = clRed
     ParentColor = False
+    Transparent = False
   end
   object Label24: TLabel
     Left = 520
@@ -721,11 +718,11 @@ object Form1: TForm1
     ParentColor = False
   end
   object Label34: TLabel
-    Left = 376
+    Left = 368
     Height = 15
     Top = 290
-    Width = 23
-    Caption = 'byte'
+    Width = 14
+    Caption = 'bit'
     ParentColor = False
   end
   object Label35: TLabel
@@ -772,8 +769,8 @@ object Form1: TForm1
     Left = 238
     Height = 15
     Top = 70
-    Width = 23
-    Caption = 'byte'
+    Width = 14
+    Caption = 'bit'
     ParentColor = False
   end
   object Label41: TLabel
@@ -865,6 +862,111 @@ object Form1: TForm1
     Top = 460
     Width = 61
     Caption = 'Luminanz 2'
+    ParentColor = False
+  end
+  object loeschenliste: TButton
+    Left = 192
+    Height = 25
+    Top = 688
+    Width = 134
+    Caption = 'Letztes Element löschen'
+    OnClick = loeschenlisteClick
+    TabOrder = 51
+  end
+  object Label1: TLabel
+    Left = 416
+    Height = 15
+    Top = 688
+    Width = 47
+    Caption = 'Entropie:'
+    ParentColor = False
+  end
+  object Label49: TLabel
+    Left = 504
+    Height = 15
+    Top = 712
+    Width = 14
+    Caption = 'bit'
+    ParentColor = False
+  end
+  object Label50: TLabel
+    Left = 704
+    Height = 15
+    Top = 712
+    Width = 14
+    Caption = 'bit'
+    ParentColor = False
+  end
+  object Label51: TLabel
+    Left = 868
+    Height = 15
+    Top = 712
+    Width = 14
+    Caption = 'bit'
+    ParentColor = False
+  end
+  object Label52: TLabel
+    Left = 616
+    Height = 15
+    Top = 688
+    Width = 79
+    Caption = 'Mittlere Länge:'
+    ParentColor = False
+  end
+  object Label53: TLabel
+    Left = 784
+    Height = 15
+    Top = 688
+    Width = 62
+    Caption = 'Redundanz:'
+    ParentColor = False
+  end
+  object Label54: TLabel
+    Left = 600
+    Height = 15
+    Top = 478
+    Width = 68
+    Caption = 'Schriftgröße:'
+    ParentColor = False
+  end
+  object Label55: TLabel
+    Left = 776
+    Height = 15
+    Top = 457
+    Width = 37
+    Caption = 'Rating:'
+    ParentColor = False
+  end
+  object Label56: TLabel
+    Left = 776
+    Height = 15
+    Top = 504
+    Width = 39
+    Caption = 'T-Wert:'
+    ParentColor = False
+  end
+  object Label57: TLabel
+    Left = 8
+    Height = 15
+    Top = 648
+    Width = 45
+    Caption = 'Zeichen:'
+    ParentColor = False
+  end
+  object Label58: TLabel
+    Left = 24
+    Height = 15
+    Top = 671
+    Width = 25
+    Caption = 'Wsk:'
+    ParentColor = False
+  end
+  object Label59: TLabel
+    Left = 684
+    Height = 15
+    Top = 508
+    Width = 11
+    Caption = 'pt'
     ParentColor = False
   end
 end

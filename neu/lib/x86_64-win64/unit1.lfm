@@ -1,25 +1,25 @@
 object Form1: TForm1
-  Left = 2086
-  Height = 745
-  Top = 132
+  Left = 937
+  Height = 753
+  Top = 122
   Width = 948
   Caption = 'Emi Calculator'
-  ClientHeight = 745
+  ClientHeight = 753
   ClientWidth = 948
   LCLVersion = '2.0.10.0'
   object wav: TButton
-    Left = 648
+    Left = 768
     Height = 25
-    Top = 44
+    Top = 60
     Width = 75
     Caption = 'Berechnen'
     OnClick = wavClick
     TabOrder = 0
   end
   object headergroesse: TEdit
-    Left = 448
+    Left = 520
     Height = 23
-    Top = 48
+    Top = 64
     Width = 80
     TabOrder = 1
     Text = '44'
@@ -27,24 +27,14 @@ object Form1: TForm1
   object laenge: TEdit
     Left = 40
     Height = 23
-    Top = 48
+    Top = 64
     Width = 80
     TabOrder = 2
   end
-  object Label1: TLabel
-    Left = 741
-    Height = 15
-    Top = 0
-    Width = 207
-    Caption = 'Alle DEC Dateigrößen in Byte eingeben!'
-    Color = clRed
-    ParentColor = False
-    Transparent = False
-  end
   object kanaele: TRadioGroup
-    Left = 560
+    Left = 680
     Height = 64
-    Top = 32
+    Top = 53
     Width = 72
     AutoFill = True
     ChildSizing.LeftRightSpacing = 6
@@ -64,49 +54,49 @@ object Form1: TForm1
     TabOrder = 3
   end
   object sampletiefe: TEdit
-    Left = 240
+    Left = 288
     Height = 23
-    Top = 48
+    Top = 64
     Width = 80
     TabOrder = 4
-    Text = '3'
+    Text = '24'
   end
   object samplerate: TEdit
-    Left = 338
+    Left = 409
     Height = 23
-    Top = 48
+    Top = 64
     Width = 80
     TabOrder = 5
     Text = '44100'
   end
   object groesse: TEdit
-    Left = 137
+    Left = 152
     Height = 23
-    Top = 48
+    Top = 64
     Width = 80
     TabOrder = 6
   end
   object groessemib: TEdit
-    Left = 137
+    Left = 152
     Height = 23
-    Top = 80
+    Top = 96
     Width = 80
     ReadOnly = True
     TabOrder = 7
   end
   object Label2: TLabel
-    Left = 440
+    Left = 520
     Height = 30
-    Top = 73
+    Top = 89
     Width = 113
     Caption = '44 falls '#13#10'Formatblock=16 Byte'
     ParentColor = False
   end
   object fmax: TEdit
-    Left = 110
+    Left = 152
     Height = 23
-    Top = 176
-    Width = 80
+    Top = 192
+    Width = 96
     TabOrder = 8
   end
   object Label3: TLabel
@@ -130,25 +120,25 @@ object Form1: TForm1
     Transparent = False
   end
   object fabtast: TEdit
-    Left = 16
+    Left = 40
     Height = 23
-    Top = 176
-    Width = 80
+    Top = 192
+    Width = 84
     TabOrder = 9
   end
   object Button1: TButton
-    Left = 208
+    Left = 288
     Height = 25
-    Top = 174
+    Top = 192
     Width = 75
     Caption = 'Berechnen'
     OnClick = Button1Click
     TabOrder = 10
   end
   object fps: TEdit
-    Left = 313
+    Left = 408
     Height = 23
-    Top = 272
+    Top = 288
     Width = 80
     TabOrder = 11
     Text = '24'
@@ -164,78 +154,78 @@ object Form1: TForm1
     Transparent = False
   end
   object laengev: TEdit
-    Left = 16
+    Left = 40
     Height = 23
-    Top = 272
+    Top = 288
     Width = 80
     TabOrder = 12
   end
   object groessev: TEdit
-    Left = 114
+    Left = 152
     Height = 23
-    Top = 274
+    Top = 288
     Width = 80
     TabOrder = 13
   end
   object aufloesung1: TEdit
-    Left = 409
+    Left = 504
     Height = 23
-    Top = 272
+    Top = 288
     Width = 80
     TabOrder = 14
     Text = '1920'
   end
   object aufloesung2: TEdit
-    Left = 513
+    Left = 623
     Height = 23
-    Top = 272
+    Top = 288
     Width = 80
     TabOrder = 15
     Text = '1080'
   end
   object x: TLabel
-    Left = 409
+    Left = 504
     Height = 15
-    Top = 272
+    Top = 288
     Width = 6
     Caption = 'x'
     ParentColor = False
   end
   object farbtiefe: TEdit
-    Left = 217
+    Left = 287
     Height = 23
-    Top = 274
+    Top = 288
     Width = 80
     TabOrder = 16
-    Text = '2'
+    Text = '16'
   end
   object groessemibv: TEdit
-    Left = 114
+    Left = 152
     Height = 23
-    Top = 312
+    Top = 322
     Width = 80
     ReadOnly = True
     TabOrder = 17
   end
   object Label6: TLabel
-    Left = 313
+    Left = 416
     Height = 30
-    Top = 308
+    Top = 322
     Width = 72
     Caption = 'Kino: 24'#13#10'Fernsehen: 25'
     ParentColor = False
   end
   object laengeminutenv: TEdit
-    Left = 16
+    Left = 40
     Height = 23
-    Top = 312
+    Top = 322
     Width = 80
     TabOrder = 18
   end
   object laengeminuten: TEdit
     Left = 40
     Height = 23
-    Top = 80
+    Top = 96
     Width = 80
     TabOrder = 19
   end
@@ -252,7 +242,7 @@ object Form1: TForm1
   object Label8: TLabel
     Left = 16
     Height = 15
-    Top = 608
+    Top = 616
     Width = 100
     Caption = 'Kodierungsrechner'
     Color = clAqua
@@ -260,23 +250,23 @@ object Form1: TForm1
     Transparent = False
   end
   object r8: TEdit
-    Left = 24
+    Left = 40
     Height = 23
-    Top = 472
+    Top = 478
     Width = 80
     TabOrder = 20
   end
   object b8: TEdit
-    Left = 222
+    Left = 238
     Height = 23
-    Top = 472
+    Top = 478
     Width = 80
     TabOrder = 21
   end
   object g8: TEdit
-    Left = 120
+    Left = 140
     Height = 23
-    Top = 472
+    Top = 478
     Width = 80
     TabOrder = 22
   end
@@ -289,37 +279,37 @@ object Form1: TForm1
     ParentColor = False
   end
   object L1: TEdit
-    Left = 456
+    Left = 392
     Height = 23
-    Top = 464
+    Top = 478
     Width = 80
     TabOrder = 23
   end
   object L2: TEdit
-    Left = 552
+    Left = 488
     Height = 23
-    Top = 464
+    Top = 478
     Width = 80
     TabOrder = 24
   end
   object t_wert: TEdit
     Left = 776
     Height = 23
-    Top = 497
+    Top = 520
     Width = 88
     TabOrder = 25
   end
   object rating: TEdit
     Left = 776
     Height = 23
-    Top = 467
+    Top = 478
     Width = 152
     TabOrder = 26
   end
   object RadioGroup1: TRadioGroup
-    Left = 334
+    Left = 600
     Height = 55
-    Top = 450
+    Top = 528
     Width = 73
     AutoFill = True
     ChildSizing.LeftRightSpacing = 6
@@ -339,65 +329,68 @@ object Form1: TForm1
     TabOrder = 27
   end
   object schriftgroesse: TEdit
-    Left = 334
+    Left = 600
     Height = 23
-    Top = 512
+    Top = 502
     Width = 80
     TabOrder = 28
   end
   object Video2: TButton
-    Left = 624
+    Left = 740
     Height = 25
-    Top = 272
+    Top = 286
     Width = 75
     Caption = 'Berechnen'
     OnClick = Video2Click
     TabOrder = 29
   end
   object L1b: TButton
-    Left = 456
-    Height = 25
-    Top = 495
+    Left = 392
+    Height = 22
+    Top = 509
     Width = 80
     Caption = 'L1'
     OnClick = L1bClick
     TabOrder = 30
   end
   object L2b: TButton
-    Left = 552
-    Height = 25
-    Top = 495
+    Left = 488
+    Height = 22
+    Top = 509
     Width = 80
     Caption = 'L2'
     OnClick = L2bClick
     TabOrder = 31
   end
   object Label10: TLabel
-    Left = 336
+    Left = 600
     Height = 15
-    Top = 440
-    Width = 44
-    Caption = 'optional'
+    Top = 457
+    Width = 46
+    Caption = 'Optional'
+    Color = clForm
     ParentColor = False
+    Transparent = False
   end
   object Zeichen: TEdit
-    Left = 48
+    Left = 65
     Height = 23
-    Top = 632
+    Top = 640
     Width = 80
     TabOrder = 32
   end
   object WSK: TEdit
-    Left = 48
+    Left = 65
     Height = 23
-    Top = 656
+    Top = 664
     Width = 80
+    OnKeyPress = WSKKeyPress
     TabOrder = 33
   end
   object Hinzufuegen: TButton
-    Left = 48
+    Left = 65
     Height = 25
-    Top = 680
+    Top = 696
     Width = 80
     Caption = 'Hinzufügen'
     OnClick = HinzufuegenClick
@@ -407,133 +400,573 @@ object Form1: TForm1
   object eingegebenezeichen: TEdit
     Left = 192
     Height = 23
-    Top = 648
+    Top = 656
     Width = 696
     TabOrder = 35
   end
   object Label11: TLabel
     Left = 200
     Height = 15
-    Top = 624
+    Top = 632
     Width = 151
     Caption = 'Bereits eingegebene Zeichen'
     ParentColor = False
   end
   object Entropie: TEdit
-    Left = 352
+    Left = 417
     Height = 23
-    Top = 680
+    Top = 704
     Width = 80
     TabOrder = 36
   end
   object mittlerelaenge: TEdit
-    Left = 496
+    Left = 616
     Height = 23
-    Top = 682
+    Top = 704
     Width = 80
     TabOrder = 37
   end
   object Redundanz: TEdit
-    Left = 680
+    Left = 784
     Height = 23
-    Top = 682
+    Top = 704
     Width = 80
     TabOrder = 38
   end
   object neuliste: TButton
-    Left = 193
+    Left = 192
     Height = 25
-    Top = 678
-    Width = 104
+    Top = 720
+    Width = 134
     Caption = 'Liste Zurücksetzen'
     OnClick = neulisteClick
     TabOrder = 39
   end
   object rsrgb: TEdit
-    Left = 24
+    Left = 40
     Height = 23
-    Top = 504
+    Top = 508
     Width = 80
     TabOrder = 40
   end
   object gsrgb: TEdit
-    Left = 120
+    Left = 140
     Height = 23
-    Top = 502
+    Top = 508
     Width = 80
     TabOrder = 41
   end
   object bsrgb: TEdit
-    Left = 222
+    Left = 238
     Height = 23
-    Top = 502
+    Top = 508
     Width = 80
     TabOrder = 42
   end
   object loeschen: TButton
-    Left = 120
+    Left = 40
     Height = 25
     Top = 544
-    Width = 80
+    Width = 278
     Caption = 'Löschen'
     OnClick = loeschenClick
     TabOrder = 43
   end
   object neuu: TButton
-    Left = 864
+    Left = 856
     Height = 25
-    Top = 18
+    Top = 6
     Width = 80
     Caption = 'Zurücksetzen'
     OnClick = neuuClick
     TabOrder = 44
   end
   object hex2: TCheckBox
-    Left = 25
+    Left = 40
     Height = 19
-    Top = 450
+    Top = 456
     Width = 41
     Caption = 'Hex'
     TabOrder = 45
   end
   object hex3: TCheckBox
-    Left = 120
+    Left = 140
     Height = 19
-    Top = 446
+    Top = 457
     Width = 41
     Caption = 'Hex'
     TabOrder = 46
   end
   object hex4: TCheckBox
-    Left = 224
+    Left = 238
     Height = 19
-    Top = 446
+    Top = 456
     Width = 41
     Caption = 'Hex'
     TabOrder = 47
   end
   object hex1: TCheckBox
-    Left = 137
+    Left = 200
     Height = 19
-    Top = 24
+    Top = 41
     Width = 41
     Caption = 'Hex'
     TabOrder = 48
   end
   object loeschen2: TButton
-    Left = 624
+    Left = 740
     Height = 25
-    Top = 304
+    Top = 316
     Width = 75
     Caption = 'Löschen'
+    OnClick = loeschen2Click
     TabOrder = 49
   end
   object loeschen1: TButton
-    Left = 648
+    Left = 768
     Height = 25
-    Top = 78
+    Top = 88
     Width = 75
     Caption = 'Löschen'
+    OnClick = loeschen1Click
     TabOrder = 50
+  end
+  object Label12: TLabel
+    Left = 607
+    Height = 37
+    Top = 276
+    Width = 7
+    Caption = ':'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -27
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label13: TLabel
+    Left = 43
+    Height = 15
+    Top = 45
+    Width = 35
+    Caption = 'Länge:'
+    ParentColor = False
+  end
+  object Label14: TLabel
+    Left = 126
+    Height = 15
+    Top = 70
+    Width = 5
+    Caption = 's'
+    ParentColor = False
+  end
+  object Label15: TLabel
+    Left = 124
+    Height = 15
+    Top = 102
+    Width = 21
+    Caption = 'min'
+    ParentColor = False
+  end
+  object Label16: TLabel
+    Left = 238
+    Height = 15
+    Top = 290
+    Width = 14
+    Caption = 'bit'
+    ParentColor = False
+  end
+  object Label17: TLabel
+    Left = 241
+    Height = 15
+    Top = 326
+    Width = 50
+    Caption = 'Mebibyte'
+    ParentColor = False
+  end
+  object Label18: TLabel
+    Left = 152
+    Height = 15
+    Top = 44
+    Width = 35
+    Caption = 'Größe:'
+    ParentColor = False
+  end
+  object Label19: TLabel
+    Left = 288
+    Height = 15
+    Top = 45
+    Width = 65
+    Caption = 'Sampletiefe:'
+    ParentColor = False
+  end
+  object Label20: TLabel
+    Left = 409
+    Height = 15
+    Top = 45
+    Width = 88
+    Caption = 'Samplefrequenz:'
+    ParentColor = False
+  end
+  object Label21: TLabel
+    Left = 368
+    Height = 15
+    Top = 70
+    Width = 14
+    Caption = 'bit'
+    ParentColor = False
+  end
+  object Label22: TLabel
+    Left = 496
+    Height = 15
+    Top = 70
+    Width = 14
+    Caption = 'Hz'
+    ParentColor = False
+  end
+  object Label23: TLabel
+    Left = 608
+    Height = 15
+    Top = 70
+    Width = 23
+    Caption = 'byte'
+    Color = clRed
+    ParentColor = False
+    Transparent = False
+  end
+  object Label24: TLabel
+    Left = 520
+    Height = 15
+    Top = 44
+    Width = 72
+    Caption = 'Headergröße:'
+    ParentColor = False
+  end
+  object Label25: TLabel
+    Left = 43
+    Height = 15
+    Top = 176
+    Width = 83
+    Caption = 'Abtastfrequenz:'
+    ParentColor = False
+  end
+  object Label26: TLabel
+    Left = 155
+    Height = 15
+    Top = 176
+    Width = 95
+    Caption = 'Maximalfrequenz:'
+    ParentColor = False
+  end
+  object Label27: TLabel
+    Left = 126
+    Height = 15
+    Top = 200
+    Width = 14
+    Caption = 'Hz'
+    ParentColor = False
+  end
+  object Label28: TLabel
+    Left = 256
+    Height = 15
+    Top = 200
+    Width = 14
+    Caption = 'Hz'
+    ParentColor = False
+  end
+  object Label29: TLabel
+    Left = 43
+    Height = 15
+    Top = 272
+    Width = 35
+    Caption = 'Länge:'
+    ParentColor = False
+  end
+  object Label30: TLabel
+    Left = 128
+    Height = 15
+    Top = 290
+    Width = 5
+    Caption = 's'
+    ParentColor = False
+  end
+  object Label31: TLabel
+    Left = 126
+    Height = 15
+    Top = 326
+    Width = 21
+    Caption = 'min'
+    ParentColor = False
+  end
+  object Label32: TLabel
+    Left = 155
+    Height = 15
+    Top = 272
+    Width = 35
+    Caption = 'Größe:'
+    ParentColor = False
+  end
+  object Label33: TLabel
+    Left = 288
+    Height = 15
+    Top = 272
+    Width = 49
+    Caption = 'Farbtiefe:'
+    ParentColor = False
+  end
+  object Label34: TLabel
+    Left = 368
+    Height = 15
+    Top = 290
+    Width = 14
+    Caption = 'bit'
+    ParentColor = False
+  end
+  object Label35: TLabel
+    Left = 408
+    Height = 15
+    Top = 272
+    Width = 22
+    Caption = 'FPS:'
+    ParentColor = False
+  end
+  object Label36: TLabel
+    Left = 504
+    Height = 15
+    Top = 272
+    Width = 50
+    Caption = 'Breite (x):'
+    ParentColor = False
+  end
+  object Label37: TLabel
+    Left = 622
+    Height = 15
+    Top = 272
+    Width = 49
+    Caption = 'Höhe (y):'
+    ParentColor = False
+  end
+  object Label38: TLabel
+    Left = 591
+    Height = 15
+    Top = 290
+    Width = 7
+    Caption = 'p'
+    ParentColor = False
+  end
+  object Label39: TLabel
+    Left = 711
+    Height = 15
+    Top = 290
+    Width = 7
+    Caption = 'p'
+    ParentColor = False
+  end
+  object Label40: TLabel
+    Left = 238
+    Height = 15
+    Top = 70
+    Width = 14
+    Caption = 'bit'
+    ParentColor = False
+  end
+  object Label41: TLabel
+    Left = 238
+    Height = 15
+    Top = 102
+    Width = 50
+    Caption = 'Mebibyte'
+    ParentColor = False
+  end
+  object Label42: TLabel
+    Left = 328
+    Height = 15
+    Top = 516
+    Width = 27
+    Caption = 'sRGB'
+    ParentColor = False
+  end
+  object Label43: TLabel
+    Left = 328
+    Height = 15
+    Top = 486
+    Width = 20
+    Caption = '8bit'
+    ParentColor = False
+  end
+  object Label44: TLabel
+    Left = 99
+    Height = 15
+    Top = 460
+    Width = 21
+    Caption = 'ROT'
+    Color = clRed
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label45: TLabel
+    Left = 297
+    Height = 15
+    Top = 460
+    Width = 21
+    Caption = 'ROT'
+    Color = clBlue
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label46: TLabel
+    Left = 199
+    Height = 15
+    Top = 460
+    Width = 21
+    Caption = 'ROT'
+    Color = clGreen
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGreen
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label47: TLabel
+    Left = 392
+    Height = 15
+    Top = 460
+    Width = 61
+    Caption = 'Luminanz 1'
+    ParentColor = False
+  end
+  object Label48: TLabel
+    Left = 488
+    Height = 15
+    Top = 460
+    Width = 61
+    Caption = 'Luminanz 2'
+    ParentColor = False
+  end
+  object loeschenliste: TButton
+    Left = 192
+    Height = 25
+    Top = 688
+    Width = 134
+    Caption = 'Letztes Element löschen'
+    OnClick = loeschenlisteClick
+    TabOrder = 51
+  end
+  object Label1: TLabel
+    Left = 416
+    Height = 15
+    Top = 688
+    Width = 47
+    Caption = 'Entropie:'
+    ParentColor = False
+  end
+  object Label49: TLabel
+    Left = 504
+    Height = 15
+    Top = 712
+    Width = 14
+    Caption = 'bit'
+    ParentColor = False
+  end
+  object Label50: TLabel
+    Left = 704
+    Height = 15
+    Top = 712
+    Width = 14
+    Caption = 'bit'
+    ParentColor = False
+  end
+  object Label51: TLabel
+    Left = 868
+    Height = 15
+    Top = 712
+    Width = 14
+    Caption = 'bit'
+    ParentColor = False
+  end
+  object Label52: TLabel
+    Left = 616
+    Height = 15
+    Top = 688
+    Width = 79
+    Caption = 'Mittlere Länge:'
+    ParentColor = False
+  end
+  object Label53: TLabel
+    Left = 784
+    Height = 15
+    Top = 688
+    Width = 62
+    Caption = 'Redundanz:'
+    ParentColor = False
+  end
+  object Label54: TLabel
+    Left = 600
+    Height = 15
+    Top = 478
+    Width = 68
+    Caption = 'Schriftgröße:'
+    ParentColor = False
+  end
+  object Label55: TLabel
+    Left = 776
+    Height = 15
+    Top = 457
+    Width = 37
+    Caption = 'Rating:'
+    ParentColor = False
+  end
+  object Label56: TLabel
+    Left = 776
+    Height = 15
+    Top = 504
+    Width = 39
+    Caption = 'T-Wert:'
+    ParentColor = False
+  end
+  object Label57: TLabel
+    Left = 8
+    Height = 15
+    Top = 648
+    Width = 45
+    Caption = 'Zeichen:'
+    ParentColor = False
+  end
+  object Label58: TLabel
+    Left = 24
+    Height = 15
+    Top = 671
+    Width = 25
+    Caption = 'Wsk:'
+    ParentColor = False
+  end
+  object Label59: TLabel
+    Left = 684
+    Height = 15
+    Top = 508
+    Width = 11
+    Caption = 'pt'
+    ParentColor = False
   end
 end

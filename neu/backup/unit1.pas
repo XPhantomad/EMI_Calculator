@@ -16,6 +16,19 @@ type
     Button1: TButton;
     aufloesung1: TEdit;
     aufloesung2: TEdit;
+    Label1: TLabel;
+    Label49: TLabel;
+    Label50: TLabel;
+    Label51: TLabel;
+    Label52: TLabel;
+    Label53: TLabel;
+    Label54: TLabel;
+    Label55: TLabel;
+    Label56: TLabel;
+    Label57: TLabel;
+    Label58: TLabel;
+    Label59: TLabel;
+    loeschenliste: TButton;
     Label12: TLabel;
     Label13: TLabel;
     Label14: TLabel;
@@ -110,7 +123,6 @@ type
     sampletiefe: TEdit;
     headergroesse: TEdit;
     laenge: TEdit;
-    Label1: TLabel;
     kanaele: TRadioGroup;
     wav: TButton;
     procedure Button1Click(Sender: TObject);
@@ -118,12 +130,16 @@ type
     procedure kanaeleClick(Sender: TObject);
     procedure L1bClick(Sender: TObject);
     procedure L2bClick(Sender: TObject);
+    procedure loeschen1Click(Sender: TObject);
+    procedure loeschen2Click(Sender: TObject);
     procedure loeschenClick(Sender: TObject);
+    procedure loeschenlisteClick(Sender: TObject);
     procedure neulisteClick(Sender: TObject);
     procedure neuuClick(Sender: TObject);
     procedure RadioGroup1Click(Sender: TObject);
     procedure Video2Click(Sender: TObject);
     procedure wavClick(Sender: TObject);
+    procedure WSKKeyPress(Sender: TObject; var Key: char);
   private
 
   public
@@ -141,6 +157,10 @@ implementation
 {$R *.lfm}
 
 { TForm1 }
+function HexToInt(HexNum: string): LongInt;
+begin
+  Result:=StrToInt('$' + HexNum);
+end;
 
 // Audioberechnung Kanaleingabe
 procedure TForm1.kanaeleClick(Sender: TObject);
@@ -160,29 +180,29 @@ begin
      //red
      if r8.text='' then begin              // eingabe sRGB
         r:=strtofloat(rsrgb.text);                                 // meckern, wenn ungültige Werte
-        r8.text:=floattostr(r*255);        // ausgabe sRGB
+        if hex2.state=cbchecked then r8.text:=inttohex(strtoint(floattostr(round(r*255))),8) else r8.text:=floattostr(r*255);        // ausgabe sRGB
      end
      else begin                            // eingabe 8bit
-        r:=strtofloat(r8.text)/255;
+        if hex2.state=cbchecked then r:=hextoint(r8.text)/255 else r:=strtofloat(r8.text)/255 ;
         rsrgb.text:=floattostr(r);         // Ausgabe sRGB
      end;
      //green
-     if g8.text='' then begin
-        g:=strtofloat(gsrgb.text);
-        g8.text:=floattostr(g*255);
+     if g8.text='' then begin              // eingabe sRGB
+        g:=strtofloat(gsrgb.text);                                 // meckern, wenn ungültige Werte
+        if hex2.state=cbchecked then g8.text:=inttohex(strtoint(floattostr(round(g*255))),8) else g8.text:=floattostr(g*255);        // ausgabe sRGB
      end
-     else begin
-        g:=strtofloat(g8.text)/255;
-        gsrgb.text:=floattostr(g);
+     else begin                            // eingabe 8bit
+        if hex2.state=cbchecked then g:=hextoint(g8.text)/255 else g:=strtofloat(g8.text)/255 ;
+        gsrgb.text:=floattostr(g);         // Ausgabe sRGB
      end;
      // blue
-     if b8.text='' then begin
-        b:=strtofloat(bsrgb.text);
-        b8.text:=floattostr(b*255);
+     if b8.text='' then begin              // eingabe sRGB
+        b:=strtofloat(bsrgb.text);                                 // meckern, wenn ungültige Werte
+        if hex2.state=cbchecked then b8.text:=inttohex(strtoint(floattostr(round(b*255))),8) else b8.text:=floattostr(b*255);        // ausgabe sRGB
      end
-     else begin
-        b:=strtofloat(b8.text)/255;
-        bsrgb.text:=floattostr(b);
+     else begin                            // eingabe 8bit
+        if hex2.state=cbchecked then b:=hextoint(b8.text)/255 else b:=strtofloat(b8.text)/255 ;
+        bsrgb.text:=floattostr(b);         // Ausgabe sRGB
      end;
 
   if r<=0.03928 then r:=r/12.92 else r:=exp(2.4*(ln((r+0.055)/1.055)));
@@ -243,6 +263,24 @@ begin
 
 end;
 
+procedure TForm1.loeschen1Click(Sender: TObject);
+begin
+     kanaele.itemindex:=-1;
+     laenge.text:='';
+     laengeminuten.text:='';
+     groesse.text:='';
+     groessemib.text:='';
+
+end;
+
+procedure TForm1.loeschen2Click(Sender: TObject);
+begin
+     laengev.text:='';
+     laengeminutenv.text:='';
+     groessev.text:='';
+     groessemibv.text:='';
+end;
+
 // Kontrastrechner Felder Löschen
 procedure TForm1.loeschenClick(Sender: TObject);
 begin
@@ -254,6 +292,26 @@ begin
   bsrgb.clear;
 end;
 
+procedure TForm1.loeschenlisteClick(Sender: TObject);
+var i: integer;
+    e,l :real;
+begin
+  n:=n-1;
+  eingegebenezeichen.text:='';
+  for i:=0 to n-1 do begin
+  eingegebenezeichen.text:=eingegebenezeichen.text+buchstaben[i] + ' : ';
+  eingegebenezeichen.text:=eingegebenezeichen.text+floattostr(WSKn[i])+ ', ';
+  end;
+  e:=0;
+  l:=0;
+  i:=0;
+  for i:=0 to n-1 do e:=e+WSKn[i]*(ln(WSKn[i])/ln(2));
+  entropie.text:=floattostr(-1*e);
+  for i:=0 to n-1 do l:=l+WSKn[i]*length(buchstaben[i]);
+  mittlerelaenge.text:=floattostr(l);
+  redundanz.text:=floattostr(l+e);
+end;
+
 // Abtasttheorem
 procedure TForm1.Button1Click(Sender: TObject);
 begin
@@ -262,12 +320,11 @@ begin
 end;
 
 
+//Zeichen hinzufügen
 procedure TForm1.HinzufuegenClick(Sender: TObject);
 var e,l: real;
     i: integer;
 begin
-    e:=0;
-    l:=0;
     WSKn[n]:=strtofloat(WSK.text);
     buchstaben[n]:=Zeichen.text;
     eingegebenezeichen.text:=eingegebenezeichen.text+buchstaben[n] + ' : ';
@@ -299,7 +356,7 @@ end;
 // Zurücksetzen
 procedure TForm1.neuuClick(Sender: TObject);
 begin
-       kanaele.itemindex:=-1;
+     kanaele.itemindex:=-1;
      laenge.text:='';
      laengeminuten.text:='';
      groesse.text:='';
@@ -388,22 +445,27 @@ begin
      if groesse.text='' then begin
         st:=strtofloat(sampletiefe.text);
         sr:=strtofloat(samplerate.text);
-        hg:=strtofloat(headergroesse.text);
+        hg:=strtofloat(headergroesse.text)*8;
         if laengeminuten.text='' then l:=strtofloat(laenge.text) else l:=strtofloat(laengeminuten.text)*60;         // eingabe Länge in Minuten oder sekunden
-        groesse.text:=floattostr(st*sr*l*p+hg);
+        if hex1.state=cbchecked then groesse.text:=inttohex(strtoint(floattostr(st*sr*l*p+hg)),8) else groesse.text:=floattostr(st*sr*l*p+hg);
         groessemib.text:=floattostr((st*sr*l*p+hg)/(1024*1024));                                                     // ausgabe größe in mebibyte
      end;
      // Berechnung Länge
      if ((laenge.text='') and (laengeminuten.text='')) then begin
         st:=strtofloat(sampletiefe.text);
         sr:=strtofloat(samplerate.text);
-        hg:=strtofloat(headergroesse.text);
-        g:=strtofloat(groesse.text);
+        hg:=strtofloat(headergroesse.text)*8;
+        if hex1.state=cbchecked then g:=hextoint(groesse.text) else g:=strtofloat(groesse.text);
         laenge.text:=floattostr((g-hg)/(st*sr*p));
         laengeminuten.text:=floattostr(((g-hg)/(st*sr*p))/60);                                                     // ausgabe Länge in Minuten
 
      end;
 
+end;
+
+procedure TForm1.WSKKeyPress(Sender: TObject; var Key: char);
+begin
+     if  Key=#13 then HinzufuegenClick(Sender);
 end;
 
 end.
