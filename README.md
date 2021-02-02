@@ -23,7 +23,9 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde (LSG: Standard
 Das bei dir ausführen um den neuen Namen bei dir zu übernehmen
 
 git branch -m Version2 wmaster
+
 git fetch origin
+
 git branch -u origin/wmaster wmaster
 
 Name master war leider noch nicht drin, weil er da immer wieder auf die gelöschte branch will.
