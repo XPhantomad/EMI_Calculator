@@ -3,7 +3,7 @@
 
 -error handling: in den Feldern, die keine Hex Werte erlauben, dürfen keine Buchstaben mehr eingegeben werden
 
-wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde
+wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde (LSG: Standard Stereo auswählen)
 
 -Fano.C für fano, scheint zu funktionieren
 
