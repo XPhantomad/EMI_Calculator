@@ -446,7 +446,7 @@ end;
 procedure TForm1.wavClick(Sender: TObject);
 var l,sr,st,hg,g:real;
 begin
-     if kanaele.itemindex=-1 then Exit;
+     //if kanaele.itemindex=-1 then Exit;   (Standard auf Stereo gesetzt)
      l:=0;
      sr:=0;
      st:=0;
