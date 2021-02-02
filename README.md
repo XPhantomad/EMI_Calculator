@@ -30,7 +30,7 @@ Das bei dir ausführen um den neuen Namen bei dir zu übernehmen
 
   git branch -u origin/master master
 
-Name master war leider noch nicht drin, weil er da immer wieder auf die gelöschte branch will.
+Ich hoffe das klappt so weil ich hab zwischendurch noch eine Branch wmaster erstellt
 
 -Enter Funktion wäre ganz praktisch, ich finde aber beim besten Willen keine leichte Implementation
 (Enter-> man ist im zweiten Feld, nochmal Enter -> man ist wieder im ersten Feld und Wert wurde hinzugefügt) 
