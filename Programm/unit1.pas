@@ -266,6 +266,7 @@ begin
 
 end;
 
+//Löschen Audio
 procedure TForm1.loeschen1Click(Sender: TObject);
 begin
      kanaele.itemindex:=-1;
@@ -276,6 +277,7 @@ begin
      hex1.state:=cbunchecked;
 end;
 
+//Löschen Video
 procedure TForm1.loeschen2Click(Sender: TObject);
 begin
      laengev.text:='';
@@ -298,6 +300,7 @@ begin
   hex4.state:=cbunchecked;
 end;
 
+//Letztes Element löschen
 procedure TForm1.loeschenlisteClick(Sender: TObject);
 var i: integer;
     e,l :real;

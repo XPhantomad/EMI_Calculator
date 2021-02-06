@@ -461,7 +461,7 @@ begin
         groessemib.text:=floattostr(((st*sr*l*p+hg))/(1024*1024));                                                     // ausgabe größe in mebibyte
      end;
      // Berechnung Länge
-     if ((laenge.text='') and (laengeminuten.text='')) then begin
+     if ((laenge.text='') or (laengeminuten.text='')) then begin
         st:=strtofloat(sampletiefe.text)/8;    //weil Sampletiefe in Bit in Byte
         sr:=strtofloat(samplerate.text);
         hg:=strtofloat(headergroesse.text);
