@@ -15,7 +15,7 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde (LSG: Standard
 
 
 ////To Do////
-
+- R, G und B bei Farb kontrasten ausgeben (weil war in einem online Test mit dran)!
 -TESTEN!
 
 
