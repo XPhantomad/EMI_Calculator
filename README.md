@@ -20,6 +20,8 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde (LSG: Standard
                 2.Farbe eingeben + Luminanz berechnen
                 1.Farbe Ändern + Luminanz berechnen
                 Wenn auf L2 gedrückt wird immer Error egal ob mit oder ohne Farben in RGB
+                
+                angeblich ist ein hex Wert mit buchstaben kein Float in allen Feldern dasselbe.
 -TESTEN!
 
 
