@@ -16,6 +16,10 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde (LSG: Standard
 
 ////To Do////
 - R, G und B bei Farb kontrasten ausgeben (weil war in einem online Test mit dran)!
+- Möglichkeit:  1.Farbe eingeben + Luminanz berechnen
+                2.Farbe eingeben + Luminanz berechnen
+                1.Farbe Ändern + Luminanz berechnen
+                Wenn auf L2 gedrückt wird immer Error egal ob mit oder ohne Farben in RGB
 -TESTEN!
 
 
