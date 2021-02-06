@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 963
+  Left = 943
   Height = 753
-  Top = 127
-  Width = 948
+  Top = 122
+  Width = 950
   Caption = 'Emi Calculator'
   ClientHeight = 753
-  ClientWidth = 948
+  ClientWidth = 950
   LCLVersion = '2.0.10.0'
   object wav: TButton
     Left = 768
@@ -631,7 +631,7 @@ object Form1: TForm1
     ParentColor = False
   end
   object Label21: TLabel
-    Left = 368
+    Left = 376
     Height = 15
     Top = 70
     Width = 14
@@ -788,8 +788,8 @@ object Form1: TForm1
     Left = 238
     Height = 15
     Top = 70
-    Width = 14
-    Caption = 'bit'
+    Width = 23
+    Caption = 'byte'
     ParentColor = False
   end
   object Label41: TLabel

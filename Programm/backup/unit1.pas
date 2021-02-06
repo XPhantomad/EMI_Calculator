@@ -441,12 +441,11 @@ begin
 end;
 
 // Audioberechnung
-// Bemerkung: die Headergröße vieleicht noch aufspliten, sodass man nur noch die größe des Frormatblocks eingeben muss
-
+// Rechnung in Byte
 procedure TForm1.wavClick(Sender: TObject);
 var l,sr,st,hg,g:real;
 begin
-     //if kanaele.itemindex=-1 then Exit;   (Standard auf Stereo gesetzt)
+     if kanaele.itemindex=-1 then Exit;
      l:=0;
      sr:=0;
      st:=0;
@@ -454,18 +453,18 @@ begin
      g:=0;
      // Berechnung Größe
      if groesse.text='' then begin
-        st:=strtofloat(sampletiefe.text);
+        st:=strtofloat(sampletiefe.text)/8; // weil Sampletiefe in Bit in Byte
         sr:=strtofloat(samplerate.text);
-        hg:=strtofloat(headergroesse.text)*8;
+        hg:=strtofloat(headergroesse.text);
         if laengeminuten.text='' then l:=strtofloat(laenge.text) else l:=strtofloat(laengeminuten.text)*60;         // eingabe Länge in Minuten oder sekunden
-        if hex1.state=cbchecked then groesse.text:=inttohex(strtoint(floattostr(st*sr*l*p+hg)),8) else groesse.text:=floattostr(st*sr*l*p+hg);
-        groessemib.text:=floattostr((st*sr*l*p+hg)/(1024*1024));                                                     // ausgabe größe in mebibyte
+        if hex1.state=cbchecked then groesse.text:=inttohex(strtoint(floattostr((st*sr*l*p+hg))),8) else groesse.text:=floattostr((st*sr*l*p+hg));
+        groessemib.text:=floattostr(((st*sr*l*p+hg))/(1024*1024));                                                     // ausgabe größe in mebibyte
      end;
      // Berechnung Länge
      if ((laenge.text='') and (laengeminuten.text='')) then begin
-        st:=strtofloat(sampletiefe.text);
+        st:=strtofloat(sampletiefe.text)/8;    //weil Sampletiefe in Bit in Byte
         sr:=strtofloat(samplerate.text);
-        hg:=strtofloat(headergroesse.text)*8;
+        hg:=strtofloat(headergroesse.text);
         if hex1.state=cbchecked then g:=hextoint(groesse.text) else g:=strtofloat(groesse.text);
         laenge.text:=floattostr((g-hg)/(st*sr*p));
         laengeminuten.text:=floattostr(((g-hg)/(st*sr*p))/60);                                                     // ausgabe Länge in Minuten
