@@ -32,6 +32,10 @@ Das bei dir ausführen um den neuen Namen bei dir zu übernehmen
 
 Ich hoffe das klappt so weil ich hab zwischendurch noch eine Branch wmaster erstellt
 
+///Updates///
+- Audioberechnung berichtigt, dabei auf Byte umgestellt, weil immer Byte gegeben sind und Byte auch für Hex berechnung gebraucht werden
+- Wsk Feld bei Kodierungsrechner NumbersOnly entfernt, da Komma eingegeben werden muss
+
 
 
 
