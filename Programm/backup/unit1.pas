@@ -69,8 +69,6 @@ type
     loeschen2: TButton;
     loeschen1: TButton;
     hex1: TCheckBox;
-    hex3: TCheckBox;
-    hex4: TCheckBox;
     hex2: TCheckBox;
     neuu: TButton;
     loeschen: TButton;
@@ -246,8 +244,6 @@ begin
      bsrgb.text:=floattostr(b);         // Ausgabe sRGB
   end;
 
-  if g8.text='' then g:=strtofloat(gsrgb.text) else g:=strtofloat(g8.text)/255;
-  if b8.text='' then b:=strtofloat(bsrgb.text) else b:=strtofloat(b8.text)/255;
   if r<=0.03928 then r:=r/12.92 else r:=exp(2.4*(ln((r+0.055)/1.055)));
   if g<=0.03928 then g:=g/12.92 else g:=exp(2.4*(ln((g+0.055)/1.055)));
   if b<=0.03928 then b:=b/12.92 else b:=exp(2.4*(ln((b+0.055)/1.055)));
@@ -266,6 +262,7 @@ begin
 
 end;
 
+//Löschen Audio
 procedure TForm1.loeschen1Click(Sender: TObject);
 begin
      kanaele.itemindex:=-1;
@@ -276,6 +273,7 @@ begin
      hex1.state:=cbunchecked;
 end;
 
+//Löschen Video
 procedure TForm1.loeschen2Click(Sender: TObject);
 begin
      laengev.text:='';
@@ -294,10 +292,9 @@ begin
   gsrgb.clear;
   bsrgb.clear;
   hex2.state:=cbunchecked;
-  hex3.state:=cbunchecked;
-  hex4.state:=cbunchecked;
 end;
 
+//Letztes Element löschen
 procedure TForm1.loeschenlisteClick(Sender: TObject);
 var i: integer;
     e,l :real;
@@ -364,8 +361,6 @@ procedure TForm1.neuuClick(Sender: TObject);
 begin
      hex1.state:=cbunchecked;
      hex2.state:=cbunchecked;
-     hex3.state:=cbunchecked;
-     hex4.state:=cbunchecked;
      kanaele.itemindex:=-1;
      laenge.text:='';
      laengeminuten.text:='';
