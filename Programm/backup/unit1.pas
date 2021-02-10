@@ -16,6 +16,9 @@ type
     Button1: TButton;
     aufloesung1: TEdit;
     aufloesung2: TEdit;
+    RL: TEdit;
+    GL: TEdit;
+    BL: TEdit;
     Label1: TLabel;
     Label49: TLabel;
     Label50: TLabel;
@@ -28,6 +31,12 @@ type
     Label57: TLabel;
     Label58: TLabel;
     Label59: TLabel;
+    Label60: TLabel;
+    Label61: TLabel;
+    Label62: TLabel;
+    Label63: TLabel;
+    Label64: TLabel;
+    Label65: TLabel;
     loeschenliste: TButton;
     Label12: TLabel;
     Label13: TLabel;
@@ -245,6 +254,7 @@ begin
   end;
 
   if r<=0.03928 then r:=r/12.92 else r:=exp(2.4*(ln((r+0.055)/1.055)));
+  RL.text := floattostr(r);
   if g<=0.03928 then g:=g/12.92 else g:=exp(2.4*(ln((g+0.055)/1.055)));
   if b<=0.03928 then b:=b/12.92 else b:=exp(2.4*(ln((b+0.055)/1.055)));
   L2.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);      // berechnung und ausgabe Luminanz Farbe 2 (dunklere Farbe)
