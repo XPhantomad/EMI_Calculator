@@ -306,6 +306,9 @@ begin
   r8.clear;
   g8.clear;
   b8.clear;
+  RL.clear;
+  GL.clear;
+  BL.clear;
   rsrgb.clear;
   gsrgb.clear;
   bsrgb.clear;
@@ -393,6 +396,9 @@ begin
      r8.clear;
      g8.clear;
      b8.clear;
+     RL.clear;
+     GL.clear;
+     BL.clear;
      rsrgb.clear;
      gsrgb.clear;
      bsrgb.clear;

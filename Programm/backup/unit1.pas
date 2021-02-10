@@ -264,7 +264,7 @@ begin
   BL.text := floattostr(b);
   L2.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);      // berechnung und ausgabe Luminanz Farbe 2 (dunklere Farbe)
   // Berechnungn T-Wert
-  if (strtoint(L1.text) >= strtoint(L2.text)) then
+  if (strtofloat(L1.text) >= strtofloat(L2.text)) then
      t_wert.text:=floattostr((strtofloat(L1.text)+0.05)/(strtofloat(L2.text)+0.05))
   else
      t_wert.text:=floattostr((strtofloat(L2.text)+0.05)/(strtofloat(L1.text)+0.05));
