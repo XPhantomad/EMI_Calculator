@@ -3,7 +3,7 @@
 
 -error handling: in den Feldern, die keine Hex Werte erlauben, dürfen keine Buchstaben mehr eingegeben werden
 
-wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde (LSG: Standard Stereo auswählen)
+wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde 
 
 -Fano.C für fano, scheint zu funktionieren
 
@@ -44,6 +44,8 @@ Ich hoffe das klappt so weil ich hab zwischendurch noch eine Branch wmaster erst
 ///Updates///
 - Audioberechnung berichtigt, dabei auf Byte umgestellt, weil immer Byte gegeben sind und Byte auch für Hex berechnung gebraucht werden
 - Wsk Feld bei Kodierungsrechner NumbersOnly entfernt, da Komma eingegeben werden muss
+- R, G, B Ausgabe hinzugefügt (wenn Zwischenergebnisse in Klausur abgefragt werden online Rechner hat das nicht)
+- T-Wert Berechnung überprüft jetzt erst ob L1 > L2 um immer hellere durch dunklere Farbe zu rechnen (für t dürften keine Zahlen kleiner 1 mehr rauskommen)
 
 
 
