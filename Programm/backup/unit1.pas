@@ -212,9 +212,12 @@ begin
         bsrgb.text:=floattostr(b);         // Ausgabe sRGB
      end;
 
-  if r<=0.03928 then r:=r/12.92 else r:=exp(2.4*(ln((r+0.055)/1.055)));
-  if g<=0.03928 then g:=g/12.92 else g:=exp(2.4*(ln((g+0.055)/1.055)));
-  if b<=0.03928 then b:=b/12.92 else b:=exp(2.4*(ln((b+0.055)/1.055)));
+     if r<=0.03928 then r:=r/12.92 else r:=exp(2.4*(ln((r+0.055)/1.055)));
+     RL.text := floattostr(r);
+     if g<=0.03928 then g:=g/12.92 else g:=exp(2.4*(ln((g+0.055)/1.055)));
+     GL.text := floattostr(g);
+     if b<=0.03928 then b:=b/12.92 else b:=exp(2.4*(ln((b+0.055)/1.055)));
+     BL.text := floattostr(b);
   L1.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);  // berechnung und ausgabe Luminanz Farbe 1 (hellere Farbe)
 end;
 
@@ -256,12 +259,17 @@ begin
   if r<=0.03928 then r:=r/12.92 else r:=exp(2.4*(ln((r+0.055)/1.055)));
   RL.text := floattostr(r);
   if g<=0.03928 then g:=g/12.92 else g:=exp(2.4*(ln((g+0.055)/1.055)));
+  GL.text := floattostr(g);
   if b<=0.03928 then b:=b/12.92 else b:=exp(2.4*(ln((b+0.055)/1.055)));
+  BL.text := floattostr(b);
   L2.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);      // berechnung und ausgabe Luminanz Farbe 2 (dunklere Farbe)
+  // Berechnungn T-Wert
+  if (strtoint(L1.text) >= strtoint(L2.text)) then
+     t_wert.text:=floattostr((strtofloat(L1.text)+0.05)/(strtofloat(L2.text)+0.05))
+  else
+     t_wert.text:=floattostr((strtofloat(L2.text)+0.05)/(strtofloat(L1.text)+0.05));
 
-  t_wert.text:=floattostr((strtofloat(L1.text)+0.05)/(strtofloat(L2.text)+0.05));   // Berechnungn T-Wert
-
-  if (not((schriftgroesse.text=''))or (p2=-1)) then begin                           // p2 gibt Fett / Normal an p2=-1 nichts ausgewählt
+  if (not((schriftgroesse.text=''))or (p2=-1)) then begin                           // p2 gibt Fett / Normal an
      if  (strtofloat(t_wert.text)>= 7) then rating.text:='ausreichend für Level AAA'
      else if ((((strtofloat(t_wert.text)>= 3) and (p2=1))and (strtofloat(schriftgroesse.text)>17)) or ((((strtofloat(t_wert.text)>= 3) and (p2=0))and (strtofloat(schriftgroesse.text)>13)))) then
           rating.text:='ausreichend für Level AA'

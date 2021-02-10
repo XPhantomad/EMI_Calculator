@@ -263,10 +263,13 @@ begin
   if b<=0.03928 then b:=b/12.92 else b:=exp(2.4*(ln((b+0.055)/1.055)));
   BL.text := floattostr(b);
   L2.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);      // berechnung und ausgabe Luminanz Farbe 2 (dunklere Farbe)
+  // Berechnungn T-Wert
+  if (strtofloat(L1.text) >= strtofloat(L2.text)) then
+     t_wert.text:=floattostr((strtofloat(L1.text)+0.05)/(strtofloat(L2.text)+0.05))
+  else
+     t_wert.text:=floattostr((strtofloat(L2.text)+0.05)/(strtofloat(L1.text)+0.05));
 
-  t_wert.text:=floattostr((strtofloat(L1.text)+0.05)/(strtofloat(L2.text)+0.05));   // Berechnungn T-Wert
-
-  if (not((schriftgroesse.text=''))or (p2=-1)) then begin                           // p2 gibt Fett / Normal an p2=-1 nichts ausgewählt
+  if (not((schriftgroesse.text=''))or (p2=-1)) then begin                           // p2 gibt Fett / Normal an
      if  (strtofloat(t_wert.text)>= 7) then rating.text:='ausreichend für Level AAA'
      else if ((((strtofloat(t_wert.text)>= 3) and (p2=1))and (strtofloat(schriftgroesse.text)>17)) or ((((strtofloat(t_wert.text)>= 3) and (p2=0))and (strtofloat(schriftgroesse.text)>13)))) then
           rating.text:='ausreichend für Level AA'
