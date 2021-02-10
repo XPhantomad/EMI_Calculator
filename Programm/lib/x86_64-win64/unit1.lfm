@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 943
+  Left = 941
   Height = 753
-  Top = 122
+  Top = 119
   Width = 950
   Caption = 'Emi Calculator'
   ClientHeight = 753
@@ -462,7 +462,6 @@ object Form1: TForm1
     Height = 23
     Top = 508
     Width = 80
-    NumbersOnly = True
     TabOrder = 40
   end
   object gsrgb: TEdit
@@ -470,7 +469,6 @@ object Form1: TForm1
     Height = 23
     Top = 508
     Width = 80
-    NumbersOnly = True
     TabOrder = 41
   end
   object bsrgb: TEdit
@@ -478,7 +476,6 @@ object Form1: TForm1
     Height = 23
     Top = 508
     Width = 80
-    NumbersOnly = True
     TabOrder = 42
   end
   object loeschen: TButton
