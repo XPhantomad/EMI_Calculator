@@ -174,37 +174,33 @@ end;
 procedure TForm1.L1bClick(Sender: TObject);
  var r,g,b:real;
 begin
-     //r:=0;
-     //g:=0;
-     //b:=0;
-
+     r:=0;
+     g:=0;
+     b:=0;
      //red
      if r8.text='' then begin              // eingabe sRGB
         r:=strtofloat(rsrgb.text);                                 // meckern, wenn ungültige Werte
         if hex2.state=cbchecked then r8.text:=inttohex(strtoint(floattostr(round(r*255))),8) else r8.text:=floattostr(r*255);        // ausgabe sRGB
      end
-     else if rsrgb.text='' then begin                            // eingabe 8bit
+     else begin                            // eingabe 8bit
         if hex2.state=cbchecked then r:=hextoint(r8.text)/255 else r:=strtofloat(r8.text)/255 ;
         rsrgb.text:=floattostr(r);         // Ausgabe sRGB
      end;
-     //else
-
      //green
      if g8.text='' then begin              // eingabe sRGB
         g:=strtofloat(gsrgb.text);                                 // meckern, wenn ungültige Werte
         if hex2.state=cbchecked then g8.text:=inttohex(strtoint(floattostr(round(g*255))),8) else g8.text:=floattostr(g*255);        // ausgabe sRGB
      end
-     else if gsrgb.text='' then begin                            // eingabe 8bit
+     else begin                            // eingabe 8bit
         if hex2.state=cbchecked then g:=hextoint(g8.text)/255 else g:=strtofloat(g8.text)/255 ;
         gsrgb.text:=floattostr(g);         // Ausgabe sRGB
      end;
-
      // blue
      if b8.text='' then begin              // eingabe sRGB
         b:=strtofloat(bsrgb.text);                                 // meckern, wenn ungültige Werte
         if hex2.state=cbchecked then b8.text:=inttohex(strtoint(floattostr(round(b*255))),8) else b8.text:=floattostr(b*255);        // ausgabe sRGB
      end
-     else if bsrgb.text='' then begin                            // eingabe 8bit
+     else begin                            // eingabe 8bit
         if hex2.state=cbchecked then b:=hextoint(b8.text)/255 else b:=strtofloat(b8.text)/255 ;
         bsrgb.text:=floattostr(b);         // Ausgabe sRGB
      end;
@@ -219,16 +215,15 @@ end;
 procedure TForm1.L2bClick(Sender: TObject);
 var r,g,b: real;
 begin
-  //r:=0;
-  //g:=0;
-  //b:=0;
-
+  r:=0;
+  g:=0;
+  b:=0;
   //red
   if r8.text='' then begin              // eingabe sRGB
      r:=strtofloat(rsrgb.text);                                 // meckern, wenn ungültige Werte
      if hex2.state=cbchecked then r8.text:=inttohex(strtoint(floattostr(round(r*255))),8) else r8.text:=floattostr(r*255);        // ausgabe sRGB
   end
-  else if rsrgb.text='' then begin                            // eingabe 8bit
+  else begin                            // eingabe 8bit
      if hex2.state=cbchecked then r:=hextoint(r8.text)/255 else r:=strtofloat(r8.text)/255 ;
      rsrgb.text:=floattostr(r);         // Ausgabe sRGB
   end;
@@ -237,7 +232,7 @@ begin
      g:=strtofloat(gsrgb.text);                                 // meckern, wenn ungültige Werte
      if hex2.state=cbchecked then g8.text:=inttohex(strtoint(floattostr(round(g*255))),8) else g8.text:=floattostr(g*255);        // ausgabe sRGB
   end
-  else if gsrgb.text='' then begin                            // eingabe 8bit
+  else begin                            // eingabe 8bit
      if hex2.state=cbchecked then g:=hextoint(g8.text)/255 else g:=strtofloat(g8.text)/255 ;
      gsrgb.text:=floattostr(g);         // Ausgabe sRGB
   end;
@@ -246,21 +241,21 @@ begin
      b:=strtofloat(bsrgb.text);                                 // meckern, wenn ungültige Werte
      if hex2.state=cbchecked then b8.text:=inttohex(strtoint(floattostr(round(b*255))),8) else b8.text:=floattostr(b*255);        // ausgabe sRGB
   end
-  else if bsrgb.text='' then begin                            // eingabe 8bit
+  else begin                            // eingabe 8bit
      if hex2.state=cbchecked then b:=hextoint(b8.text)/255 else b:=strtofloat(b8.text)/255 ;
      bsrgb.text:=floattostr(b);         // Ausgabe sRGB
   end;
 
+  if g8.text='' then g:=strtofloat(gsrgb.text) else g:=strtofloat(g8.text)/255;
+  if b8.text='' then b:=strtofloat(bsrgb.text) else b:=strtofloat(b8.text)/255;
   if r<=0.03928 then r:=r/12.92 else r:=exp(2.4*(ln((r+0.055)/1.055)));
   if g<=0.03928 then g:=g/12.92 else g:=exp(2.4*(ln((g+0.055)/1.055)));
   if b<=0.03928 then b:=b/12.92 else b:=exp(2.4*(ln((b+0.055)/1.055)));
-  // Ausgabe von R, G, B einfügen
   L2.Text:=floattostr(0.2126*r+0.7152*g+0.0722*b);      // berechnung und ausgabe Luminanz Farbe 2 (dunklere Farbe)
 
   t_wert.text:=floattostr((strtofloat(L1.text)+0.05)/(strtofloat(L2.text)+0.05));   // Berechnungn T-Wert
 
-  //Rating Ausgabe
-  if (not((schriftgroesse.text=''))or (p2=-1)) then begin                           // p2 gibt Fett / Normal an
+  if (not((schriftgroesse.text=''))or (p2=-1)) then begin                           // p2 gibt Fett / Normal an p2=-1 nichts ausgewählt
      if  (strtofloat(t_wert.text)>= 7) then rating.text:='ausreichend für Level AAA'
      else if ((((strtofloat(t_wert.text)>= 3) and (p2=1))and (strtofloat(schriftgroesse.text)>17)) or ((((strtofloat(t_wert.text)>= 3) and (p2=0))and (strtofloat(schriftgroesse.text)>13)))) then
           rating.text:='ausreichend für Level AA'
@@ -271,7 +266,6 @@ begin
 
 end;
 
-//Löschen Audio
 procedure TForm1.loeschen1Click(Sender: TObject);
 begin
      kanaele.itemindex:=-1;
@@ -282,7 +276,6 @@ begin
      hex1.state:=cbunchecked;
 end;
 
-//Löschen Video
 procedure TForm1.loeschen2Click(Sender: TObject);
 begin
      laengev.text:='';
@@ -305,7 +298,6 @@ begin
   hex4.state:=cbunchecked;
 end;
 
-//Letztes Element löschen
 procedure TForm1.loeschenlisteClick(Sender: TObject);
 var i: integer;
     e,l :real;
