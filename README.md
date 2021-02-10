@@ -15,6 +15,8 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde (LSG: Standard
 
 
 ////To Do////
+- extra Button für t Berechnung (Vorteil: bei #000000 kann man direkt 0 für L2 reinschreiben)
+  Lsg: man kann die 0 auch bei L1 reinschreiben und die Farben vertausche weil t Berechnung verbessert
 - Für Felder, wo Float eingabe möglich sein soll NumbersOnly wieder auf False setzen (für sRGB bereits gemacht)
 - R, G und B bei Farb kontrasten ausgeben (weil war in einem online Test mit dran)!
 - Möglichkeit:  1.Farbe eingeben + Luminanz berechnen
