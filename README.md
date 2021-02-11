@@ -7,7 +7,6 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde
 
 -Fano.C für fano, scheint zu funktionieren
 
--Tonhöhe Funktion doch entfernt
 
 -https://github.com/fsr villeicht können wir uns die Zusammenfassung doch sparen (...vielleicht wäre sie aber auch trotzdem sinnvoll?)
 
@@ -18,13 +17,6 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde
 - extra Button für t Berechnung (Vorteil: bei #000000 kann man direkt 0 für L2 reinschreiben)
   Lsg: man kann die 0 auch bei L1 reinschreiben und die Farben vertausche weil t Berechnung verbessert
 - Für Felder, wo Float eingabe möglich sein soll NumbersOnly wieder auf False setzen (für sRGB bereits gemacht)
-- R, G und B bei Farb kontrasten ausgeben (weil war in einem online Test mit dran)!
-- Möglichkeit:  1.Farbe eingeben + Luminanz berechnen
-                2.Farbe eingeben + Luminanz berechnen
-                1.Farbe Ändern + Luminanz berechnen
-                Wenn auf L2 gedrückt wird immer Error egal ob mit oder ohne Farben in RGB
-                
-     angeblich ist ein hex Wert mit buchstaben kein Float in allen Feldern dasselbe.
 -TESTEN!
 
 
