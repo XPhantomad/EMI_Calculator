@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  ValEdit, Grids, ActnList;
+  ValEdit, Grids, ActnList, ShellApi, Windows;
 
 type
 
@@ -16,6 +16,12 @@ type
     Button1: TButton;
     aufloesung1: TEdit;
     aufloesung2: TEdit;
+    Label66: TLabel;
+    Label67: TLabel;
+    Label68: TLabel;
+    Label69: TLabel;
+    Label70: TLabel;
+    Label71: TLabel;
     RL: TEdit;
     GL: TEdit;
     BL: TEdit;
@@ -137,6 +143,7 @@ type
     procedure kanaeleClick(Sender: TObject);
     procedure L1bClick(Sender: TObject);
     procedure L2bClick(Sender: TObject);
+    procedure Label68Click(Sender: TObject);
     procedure loeschen1Click(Sender: TObject);
     procedure loeschen2Click(Sender: TObject);
     procedure loeschenClick(Sender: TObject);
@@ -175,6 +182,15 @@ begin
      p:=kanaele.itemindex;
      if p=1 then p:=2;
      if p=0 then P:=1;
+end;
+
+procedure TForm1.Label68Click(Sender: TObject);
+var
+  MyLink: string;
+begin
+  MyLink := 'http://www.save-editor.com/tools/wse_hex.html';
+  ShellExecute(Application.Handle, PChar('open'), PChar(MyLink),
+   nil, nil, SW_SHOW);
 end;
 
 // Berechnung Luminanz Farbe1

@@ -1,10 +1,10 @@
 object Form1: TForm1
   Left = 943
-  Height = 753
+  Height = 801
   Top = 122
   Width = 950
   Caption = 'Emi Calculator'
-  ClientHeight = 753
+  ClientHeight = 801
   ClientWidth = 950
   LCLVersion = '2.0.10.0'
   object wav: TButton
@@ -1034,5 +1034,66 @@ object Form1: TForm1
     Width = 7
     Caption = 'B'
     ParentColor = False
+  end
+  object Label66: TLabel
+    Left = 16
+    Height = 15
+    Top = 752
+    Width = 129
+    Caption = 'Byte Conversion Beispiel'
+    Color = clAqua
+    ParentColor = False
+    Transparent = False
+  end
+  object Label67: TLabel
+    Left = 99
+    Height = 15
+    Top = 776
+    Width = 107
+    Caption = 'Little Endian 996CB4'
+    ParentColor = False
+  end
+  object Label68: TLabel
+    Left = 680
+    Height = 15
+    Top = 776
+    Width = 259
+    Caption = 'http://www.save-editor.com/tools/wse_hex.html'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsUnderline]
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label68Click
+  end
+  object Label69: TLabel
+    Left = 227
+    Height = 15
+    Top = 776
+    Width = 107
+    Caption = 'Aufgefüllt 00996CB4'
+    ParentColor = False
+  end
+  object Label70: TLabel
+    Left = 362
+    Height = 15
+    Top = 776
+    Width = 110
+    Caption = 'Big Endian B46C9900'
+    ParentColor = False
+  end
+  object Label71: TLabel
+    Left = 591
+    Height = 15
+    Top = 776
+    Width = 72
+    Caption = 'Erst auffüllen!'
+    Color = clRed
+    ParentColor = False
+    Transparent = False
   end
 end
