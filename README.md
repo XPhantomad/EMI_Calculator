@@ -44,6 +44,7 @@ Ich hoffe das klappt so weil ich hab zwischendurch noch eine Branch wmaster erst
   - Es können bei Anzhal keine Buchstaben eingegeben werden 
   - Die Ausgabe ist in der MsgBox zu sehen und im Clipboard gespeichert
   - Nach drücken von OK bei der MsgBox geht die GUI wieder auf
+  
  -Endian Konvertierung Notlösung hinzugefügt 
   
   
