@@ -1049,11 +1049,12 @@ object Form1: TForm1
     Left = 99
     Height = 15
     Top = 776
-    Width = 107
-    Caption = 'Little Endian 996CB4'
+    Width = 101
+    Caption = 'Big Endian: 996CB4'
     ParentColor = False
   end
   object Label68: TLabel
+    Cursor = crHandPoint
     Left = 680
     Height = 15
     Top = 776
@@ -1074,16 +1075,16 @@ object Form1: TForm1
     Left = 227
     Height = 15
     Top = 776
-    Width = 107
-    Caption = 'Aufgefüllt 00996CB4'
+    Width = 110
+    Caption = 'Aufgefüllt: 00996CB4'
     ParentColor = False
   end
   object Label70: TLabel
     Left = 362
     Height = 15
     Top = 776
-    Width = 110
-    Caption = 'Big Endian B46C9900'
+    Width = 122
+    Caption = 'Little Endian: B46C9900'
     ParentColor = False
   end
   object Label71: TLabel
