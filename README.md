@@ -38,6 +38,14 @@ Ich hoffe das klappt so weil ich hab zwischendurch noch eine Branch wmaster erst
 - Wsk Feld bei Kodierungsrechner NumbersOnly entfernt, da Komma eingegeben werden muss
 - R, G, B Ausgabe hinzugefügt (wenn Zwischenergebnisse in Klausur abgefragt werden online Rechner hat das nicht)
 - T-Wert Berechnung überprüft jetzt erst ob L1 > L2 um immer hellere durch dunklere Farbe zu rechnen (für t dürften keine Zahlen kleiner 1 mehr rauskommen)
+- Huffman Eingabe Tool geschrieben:
+  - Mit Tab kann durchgängig weiter gegangen werden
+  - Es kann nur ein Buchstabe/Zahl aufs mal eingegeben werden möglicherweise noch ändern
+  - Es können bei Anzhal keine Buchstaben eingegeben werden 
+  - Die Ausgabe ist in der MsgBox zu sehen und im Clipboard gespeichert
+  - Nach drücken von OK bei der MsgBox geht die GUI wieder auf
+  
+  
 
 
 
