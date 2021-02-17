@@ -28,6 +28,7 @@ wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde
   - Die Ausgabe ist in der MsgBox zu sehen und im Clipboard gespeichert
   - Nach drücken von OK bei der MsgBox geht die GUI wieder auf 
  - Endian Konvertierung Notlösung hinzugefügt 
+ - Zusammenfassung hier mit reingemacht
   
   
 
