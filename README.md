@@ -3,6 +3,7 @@
 - Deutsche Schreibweise (,) für Dezimalzahlen verwenden
 - Keine Tausendertrennzeichen verwenden
 - Eingabe von Buchstaben (oder ,) nur in Felder wo es nötig ist möglich
+- Für alle Anwendungen ausführbare .exe sowie Quellcode enthalten
 
 ## Audiorechner
 - Eingabe in allen Feldern außer Mebibiyte möglich
@@ -66,46 +67,17 @@ für Algoritmus auf https://people.ok.ubc.ca/ylucet/DS/Huffman.html
 
 Nötig, wenn nur Zeichen und dazugehörende WSK gegeben sind.
 
-- Eingabe EINES Buchstaben oder Symbols
+- Eingabe EINES Buchstaben oder Symbols (in .ahk  Datei Zeile 4 Ende "Limit1" entfernen um unendlich viele Zeichen eingeben zu können)
 - Eingabe Anzahl
 - Ausgabe(gewünschte Anzahl der Zeichen) wird automatisch in Zwischenablage gelegt 
 - Einfügen (Strg + V) in "Text" Eingabefeld auf Webseite
 - Dialogfeld mit OK schließen, Eingabe erscheint automatisch wieder
 - Schließen des Eingabefensters über X (!im Notfall!: oder in Taskleiste rechts grünes Symbol mit H suchen, Rechtsclick, Exit)
 
+# Credits
+Jan Biedermann, Adrian Scholze
 
+WS 20/21 
 
--error handling: in den Feldern, die keine Hex Werte erlauben, dürfen keine Buchstaben mehr eingegeben werden
-
-wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde 
-
--Fano.C für fano, scheint zu funktionieren
-
-
--https://github.com/fsr villeicht können wir uns die Zusammenfassung doch sparen (...vielleicht wäre sie aber auch trotzdem sinnvoll?)
-
-////To Do////
-- extra Button für t Berechnung (Vorteil: bei #000000 kann man direkt 0 für L2 reinschreiben)
-  Lsg: man kann die 0 auch bei L1 reinschreiben und die Farben vertausche weil t Berechnung verbessert
-- Für Felder, wo Float eingabe möglich sein soll NumbersOnly wieder auf False setzen (für sRGB bereits gemacht)
--TESTEN!
-
-///Updates///
-- Audioberechnung berichtigt, dabei auf Byte umgestellt, weil immer Byte gegeben sind und Byte auch für Hex berechnung gebraucht werden
-- Wsk Feld bei Kodierungsrechner NumbersOnly entfernt, da Komma eingegeben werden muss
-- R, G, B Ausgabe hinzugefügt (wenn Zwischenergebnisse in Klausur abgefragt werden online Rechner hat das nicht)
-- T-Wert Berechnung überprüft jetzt erst ob L1 > L2 um immer hellere durch dunklere Farbe zu rechnen (für t dürften keine Zahlen kleiner 1 mehr rauskommen)
-- Huffman Eingabe Tool geschrieben:
-  - Mit Tab kann durchgängig weiter gegangen werden
-  - Es kann nur ein Buchstabe/Zahl aufs mal eingegeben werden möglicherweise noch ändern
-  - Es können bei Anzhal keine Buchstaben eingegeben werden 
-  - Die Ausgabe ist in der MsgBox zu sehen und im Clipboard gespeichert
-  - Nach drücken von OK bei der MsgBox geht die GUI wieder auf 
- - Endian Konvertierung Notlösung hinzugefügt 
- - Zusammenfassung hier mit reingemacht
-  
-  
-
-
-
+speziell für Onlineklausuren geeignet 👌
 
