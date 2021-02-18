@@ -4,7 +4,7 @@
 - Eingabe bei Größe auch in Hex (ohne #) möglich
 - Ausgabe bei Größe auch in Hex möglich
 - ACHTUNG Sampletiefe in bit angegeben
-- Länge Felder frei --> berechnet die Länge 
+- Länge Felder(!) frei --> berechnet die Länge 
 - Größe Feld frei --> berechnet Dateigröße 
 - Bsp: Datenchunkgröße berechnen: Headergröße auf 8 setzen und Größe aus Länge berechnen
 
@@ -13,7 +13,20 @@
 
 ## Videorechner
 - Eingabe in allen Feldern außer Mebibiyte möglich
-- Achtung Größe 
+- ACHTUNG Farbtiefe in bit angegeben
+- Länge Felder(!) frei --> berechnet die Länge 
+- Größe Feld frei --> berechnet Dateigröße 
+
+## Kontrastrechner
+- Eingabe der Farbwerte als:
+  - 8bit, Intervall [0, 255]
+  - 8bit Hex: Intervall [000000, FFFFFF]
+  - sRGB: Intervall [0,1]
+- Hex Checkbox gilt für alle 8bit Farbfelder
+1. Luminanz von Farbe 1 mit L1 ausgeben, Ausgabe der R, G und B Werte, sowie der sRGB Werte der jeweiligen Farben 
+(Löschen Button)
+2. Luminanz von Farbe 2 mit L2 ausgeben, Ausgabe der R, G und B Werte, sowie der sRGB Werte der jeweiligen Farben  
+
 
 ////Stand////
 
