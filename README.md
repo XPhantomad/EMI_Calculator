@@ -28,12 +28,15 @@
   - 8bit Hex: Intervall [000000, FFFFFF]
   - sRGB: Intervall [0,1]
 - Hex Checkbox gilt für alle 8bit Farbfelder
+- Eingabereihenfolge der Farben (erst hellere, dann dunklere Farbe) egal
 1. Luminanz von Farbe 1 mit L1 ausgeben. Zusätzlich Ausgabe der R, G und B Werte, sowie der sRGB oder 8bit Werte der jeweiligen Farben 
 
 (Löschen Button um alle Farbwerte zu löschen)
+
 2. Luminanz von Farbe 2 mit L2 ausgeben. Zusätzlich Ausgabe der R, G und B Werte, sowie der sRGB oder 8bit Werte der jeweiligen Farben  
 
 Ausgabe des T-Wertes (wenn vorher bereits Schriftgröße und/oder Schriftstil eingegeben wurde wird Rating nach WACG 2.0 bereits ausgegeben)
+
 3. Optional Schriftgröße und/oder Stil eingeben, nochmals L2 Button drücken ohne Werte vorher zu löschen gitb Rating nach WACG 2.0 aus
 
 (Wenn Löschen vergessen wurde und nur einzelne Farbwerte geändert wurden wird von 8bit Eingabe ausgehend berechnet)
@@ -51,12 +54,27 @@ Tipp: über Tab und Shift+Tab kann zwischen Zeichen und WSK Eingabefeldern gewec
 - ((selten) Ausgabe entspricht dem falschen Datentyp)
 
 # Fano C-Programm
+(nicht selbst geschrieben)
+!! Eingabe der WSK in englischer Schreibweise (mit . )
 - Anzahl der gegebenen Zeichen eingeben
 - Zeichen der Reihe nach eingeben
 - WSK zu Zeichen der Reihe nach eingeben (!!!! letzte WSK um min 1/10 verrringern (weil sonst Fehlermeldung, dass Summe WSK > 1) Bsp: WSK = 0,01 --> Eingabe 0,009999 o.ä.!!!)
 - Ausgabe der Fanocodierung
 
-# Huffman
+# Huffman Eingabetool
+für Algoritmus auf https://people.ok.ubc.ca/ylucet/DS/Huffman.html
+
+Nötig, wenn nur Zeichen und dazugehörende WSK gegeben sind.
+
+- Eingabe EINES Buchstaben oder Symbols
+- Eingabe Anzahl
+- Ausgabe(gewünschte Anzahl der Zeichen) wird automatisch in Zwischenablage gelegt 
+- Einfügen (Strg + V) in "Text" Eingabefeld auf Webseite
+- Dialogfeld mit OK schließen, Eingabe erscheint automatisch wieder
+- Schließen des Eingabefensters über X (!im Notfall!: oder in Taskleiste rechts grünes Symbol mit H suchen, Rechtsclick, Exit)
+
+
+
 -error handling: in den Feldern, die keine Hex Werte erlauben, dürfen keine Buchstaben mehr eingegeben werden
 
 wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde 
