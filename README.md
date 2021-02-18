@@ -4,6 +4,7 @@
 - Keine Tausendertrennzeichen verwenden
 - Eingabe von Buchstaben (oder ,) nur in Felder wo es nötig ist möglich
 - Für alle Anwendungen ausführbare .exe sowie Quellcode enthalten
+- globaler Zurücksetzen Button um alle Eingegebenen Werte zu Löschen
 
 ## Audiorechner
 - Eingabe in allen Feldern außer Mebibiyte möglich
@@ -28,6 +29,7 @@
   - 8bit, Intervall [0, 255]
   - 8bit Hex: Intervall [000000, FFFFFF]
   - sRGB: Intervall [0,1]
+  - (Eingabe als R, G und B (3. Zeile) nicht möglich)
 - Hex Checkbox gilt für alle 8bit Farbfelder
 - Eingabereihenfolge der Farben (erst hellere, dann dunklere Farbe) egal
 1. Luminanz von Farbe 1 mit L1 ausgeben. Zusätzlich Ausgabe der R, G und B Werte, sowie der sRGB oder 8bit Werte der jeweiligen Farben 
@@ -76,7 +78,3 @@ Nötig, wenn nur Zeichen und dazugehörende WSK gegeben sind.
 
 # Credits
 Jan Biedermann, Adrian Scholze
-
-WS 20/21 
-
-speziell für Onlineklausuren geeignet 👌
