@@ -1,4 +1,9 @@
 # EMI_Calculator
+
+- Deutsche Schreibweise (,) für Dezimalzahlen verwenden
+- Keine Tausendertrennzeichen verwenden
+- Eingabe von Buchstaben (oder ,) nur in Felder wo es nötig ist möglich
+
 ## Audiorechner
 - Eingabe in allen Feldern außer Mebibiyte möglich
 - Eingabe bei Größe auch in Hex (ohne #) möglich
@@ -23,13 +28,35 @@
   - 8bit Hex: Intervall [000000, FFFFFF]
   - sRGB: Intervall [0,1]
 - Hex Checkbox gilt für alle 8bit Farbfelder
-1. Luminanz von Farbe 1 mit L1 ausgeben, Ausgabe der R, G und B Werte, sowie der sRGB Werte der jeweiligen Farben 
-(Löschen Button)
-2. Luminanz von Farbe 2 mit L2 ausgeben, Ausgabe der R, G und B Werte, sowie der sRGB Werte der jeweiligen Farben  
+1. Luminanz von Farbe 1 mit L1 ausgeben. Zusätzlich Ausgabe der R, G und B Werte, sowie der sRGB oder 8bit Werte der jeweiligen Farben 
 
+(Löschen Button um alle Farbwerte zu löschen)
+2. Luminanz von Farbe 2 mit L2 ausgeben. Zusätzlich Ausgabe der R, G und B Werte, sowie der sRGB oder 8bit Werte der jeweiligen Farben  
 
-////Stand////
+Ausgabe des T-Wertes (wenn vorher bereits Schriftgröße und/oder Schriftstil eingegeben wurde wird Rating nach WACG 2.0 bereits ausgegeben)
+3. Optional Schriftgröße und/oder Stil eingeben, nochmals L2 Button drücken ohne Werte vorher zu löschen gitb Rating nach WACG 2.0 aus
 
+(Wenn Löschen vergessen wurde und nur einzelne Farbwerte geändert wurden wird von 8bit Eingabe ausgehend berechnet)
+
+## Kodierungsrechner
+- Buchstabe[n] oder Symbol[e] mit dazugehöriger WSK eingeben und Hinzufügen 
+- Entropie, mittlere Wortlänge und Redundanz werden immer aktuell ermittelt
+- "Bereits eingegebene Zeichen" dient nur Ausgabe keine Eingabe darüber möglich!
+Tipp: über Tab und Shift+Tab kann zwischen Zeichen und WSK Eingabefeldern gewechselt werden; mit Enter(nur wenn WSK Eingabefeld ausgewählt ist) wird Hinzufügen ausgeführt.
+
+## Mögliche Ursachen für Fehlermeldungen: 
+- ungültige Zeichen bei der Eingabe verwendet
+- keine oder zu wenig Werte eingegeben um etwas zu berechnen
+- Werte außerhalb des vorgegebenen Werteberreichs eingegeben
+- ((selten) Ausgabe entspricht dem falschen Datentyp)
+
+# Fano C-Programm
+- Anzahl der gegebenen Zeichen eingeben
+- Zeichen der Reihe nach eingeben
+- WSK zu Zeichen der Reihe nach eingeben (!!!! letzte WSK um min 1/10 verrringern (weil sonst Fehlermeldung, dass Summe WSK > 1) Bsp: WSK = 0,01 --> Eingabe 0,009999 o.ä.!!!)
+- Ausgabe der Fanocodierung
+
+# Huffman
 -error handling: in den Feldern, die keine Hex Werte erlauben, dürfen keine Buchstaben mehr eingegeben werden
 
 wav wird nicht berechnet, wenn kein Mono/Stereo ausgewählt wurde 
