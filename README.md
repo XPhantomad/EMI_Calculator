@@ -80,4 +80,3 @@ Jan Biedermann, Adrian Scholze
 WS 20/21 
 
 speziell für Onlineklausuren geeignet 👌
-
