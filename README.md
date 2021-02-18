@@ -1,4 +1,13 @@
 # EMI_Calculator
+  ## Audiorechner
+- Eingabe in allen Feldern außer Mebibiyte möglich
+- Eingabe bei Größe auch in Hex (ohne #) möglich
+- ACHTUNG Sampletiefe in bit angegeben
+- Länge Felder frei --> berechnet die Länge 
+- Größe Feld frei --> berechnet Dateigröße 
+
+
+
 ////Stand////
 
 -error handling: in den Feldern, die keine Hex Werte erlauben, dürfen keine Buchstaben mehr eingegeben werden
