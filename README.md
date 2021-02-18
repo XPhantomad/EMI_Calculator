@@ -1,12 +1,19 @@
 # EMI_Calculator
-  ## Audiorechner
+## Audiorechner
 - Eingabe in allen Feldern außer Mebibiyte möglich
 - Eingabe bei Größe auch in Hex (ohne #) möglich
+- Ausgabe bei Größe auch in Hex möglich
 - ACHTUNG Sampletiefe in bit angegeben
 - Länge Felder frei --> berechnet die Länge 
 - Größe Feld frei --> berechnet Dateigröße 
+- Bsp: Datenchunkgröße berechnen: Headergröße auf 8 setzen und Größe aus Länge berechnen
 
+## Abtasttheorem
+- Eingabe eines Wertes --> berechnen des Fehlenden
 
+## Videorechner
+- Eingabe in allen Feldern außer Mebibiyte möglich
+- Achtung Größe 
 
 ////Stand////
 
