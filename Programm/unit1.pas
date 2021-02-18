@@ -456,7 +456,7 @@ begin
   if groessev.text='' then begin
         if laengeminutenv.text='' then l:=strtofloat(laengev.text) else l:=strtofloat(laengeminutenv.text)*60;     // eingabe Länge in Minuten oder Sekunden
         fpsv:=strtofloat(fps.text);                                                                                // eingabe FPS
-        ft:=strtofloat(farbtiefe.text);                                                                            // eingabe Farbtiefe
+        ft:=strtofloat(farbtiefe.text)/8;                                                                          // eingabe Farbtiefe in Bit
         a1:=strtofloat(aufloesung1.text);                                                                          // eingabe Auflösung x
         a2:=strtofloat(aufloesung2.text);                                                                          // eingabe Auflösung y
         groessev.text:=floattostr(l*fpsv*ft*a1*a2);                                                                // ausgabe größe in byte
@@ -466,7 +466,7 @@ begin
   if ((laengev.text='') and (laengeminutenv.text='')) then begin
         g:=strtofloat(groessev.text);                                                                             // eingabe größe in Byte
         fpsv:=strtofloat(fps.text);
-        ft:=strtofloat(farbtiefe.text);
+        ft:=strtofloat(farbtiefe.text)/8;
         a1:=strtofloat(aufloesung1.text);
         a2:=strtofloat(aufloesung2.text);
         laengev.text:=floattostr(g/(fpsv*ft*a1*a2));                                                              // ausgabe Länge in sekunden
