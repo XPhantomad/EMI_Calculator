@@ -285,7 +285,7 @@ begin
   else
      t_wert.text:=floattostr((strtofloat(L2.text)+0.05)/(strtofloat(L1.text)+0.05));
 
-  if (not((schriftgroesse.text=''))or (p2=-1)) then begin                           // p2 gibt Fett / Normal an
+  if (not((schriftgroesse.text='') or (p2=-1))) then begin                           // p2 gibt Fett / Normal an
      if  (strtofloat(t_wert.text)>= 7) then rating.text:='ausreichend für Level AAA'
      else if ((((strtofloat(t_wert.text)>= 3) and (p2=0))and (strtofloat(schriftgroesse.text)>17)) or ((((strtofloat(t_wert.text)>= 3) and (p2=1))and (strtofloat(schriftgroesse.text)>13)))) then
           rating.text:='ausreichend für Level AA'

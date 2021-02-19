@@ -19,10 +19,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="443"/>
-        <CursorPos X="43" Y="469"/>
+        <TopLine Value="405"/>
+        <CursorPos X="100" Y="448"/>
         <FoldState Value=" T3nf08~"/>
-        <ComponentState Value="1"/>
         <UsageCount Value="110"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>

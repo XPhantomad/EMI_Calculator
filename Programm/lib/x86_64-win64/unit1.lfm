@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 5
+  Left = 408
   Height = 801
-  Top = 27
+  Top = 203
   Width = 950
   Caption = 'Emi Calculator'
   ClientHeight = 801
