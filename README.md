@@ -77,4 +77,4 @@ Nötig, wenn nur Zeichen und dazugehörende WSK gegeben sind.
 - Schließen des Eingabefensters über X (!im Notfall!: oder in Taskleiste rechts grünes Symbol mit H suchen, Rechtsclick, Exit)
 
 # Credits
-Jan Biedermann, Adrian Scholze
+Adrian Scholze
